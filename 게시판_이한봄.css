@@ -1,3 +1,5 @@
+
+
 *{  
     padding: 0;
     margin: 0;
@@ -136,7 +138,41 @@ main {
     width: inherit;
 }
 
+#page_status{
+    border: 1px black solid;
+    height: 50px;
+    margin: 0px 10px 0 10px;
+    padding: 5px;
+
+    display: flex;
+    justify-content: space-between;
+}
+#page_name{
+    font-size: 20pt;
+    font-weight: bold;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.order_wrapper{
+    margin-top: 12px;
+    margin-left: auto;
+    width: 170px;
+}
+#post_order{
+    width: 85px;
+    margin: auto;
+}
+#write_btn{
+    margin: auto;
+    margin-left: 10px;
+    width: 60px;
+
+}
+
 .content {
+    position: relative;
+    top: 9px;
     margin: 0 10px 0 10px;
     box-sizing: border-box;
     height: 90%;

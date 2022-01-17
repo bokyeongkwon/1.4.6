@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,6 +67,20 @@
         </div>
         <!-- 게시판 -->
         <div class="content_page">
+            <!-- 게시판 상단 현 페이지 주소 표시, 정렬 콤보박스, 글쓰기 버튼 -->
+            <div id="page_status">
+                <div id="page_name">Menu2</div>
+
+                <!-- order_wrapper = (order + write_btn) -->
+                <div class="order_wrapper">
+                    <select name="order" id="post_order">
+                        <option value="">정렬기준</option>
+                        <option value="">아직미정</option>
+                        <option value="">조회수등</option>
+                    </select>
+                    <button id="write_btn">글쓰기</button>
+                </div>
+            </div>
             <!-- 본문 -->
             <div class="content">
                 <!-- 포스트. 예시는 투박하게 두더라도 추후 리팩토링 필수 -->
