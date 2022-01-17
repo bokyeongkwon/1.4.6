@@ -13,9 +13,7 @@
 </head>
 <body>
     <header>
-        <!-- 로고 -->
         <div class="logo"><img src="logo.jpg" alt="" width="150px" height="100px"></div>
-        <!-- 상단 메뉴 -->
         <nav>
             <ul class="menu">
                 <li>분야별 레시피</li>
@@ -31,7 +29,6 @@
                 <li>자유게시판</li>
             </ul>
         </nav>
-        <!-- 우측상단 아이콘 -->
         <div class="icon">
             <ul>
                 <li ><a href="#" class="searchBtn"><i class="fas fa-search"></i></a></li>
@@ -40,6 +37,13 @@
             </ul>
         </div>
     </header>
+
+    <div class="container_search">
+        <div class="search">
+            <input class="search textbox" type="text" placeholder="검색어를 입력하세요.">
+            <button class="search button">검색</button>
+        </div>
+    </div>
 
     <main>
         <section>
@@ -50,11 +54,28 @@
                 </div>
                 <hr>
                 <div class="임시">
+                    
                     <select name="boardCho" id="boardCho">
-                        <option value="1">게시판선택</option>
+                        <option value="0">게시판선택</option>
+                        <option value="1">제과</option>
+                        <option value="2">제빵</option>
+                        <option value="3">음료</option>
+                        <option value="4">발렌타인 데이</option>
+                        <option value="5">빼빼로 데이</option>
+                        <option value="6">할로윈</option>
+                        <option value="7">크리스마스</option>
+                        <option value="8">구도 / 각도</option>
+                        <option value="9">보정</option>
+                        <option value="10">소품</option>
+                        <option value="11">Q&A</option>
+                        <option value="12">자유게시판</option>
                     </select>
                     <div class="resource">
-                        <a href="#">레시피 출처</a>
+                        <select name="resource" id="resource">
+                            <option value="1">게시판선택</option>
+                            <option value="2">나만의 레시피</option>
+                            <option value="3">퍼온 레시피</option>
+                        </select>
                     </div>
                 </div>
                 <div class="boardTitle">
@@ -62,27 +83,51 @@
                 </div>
                 <div class="content">
                     <div class="input">
-                        <button>사진</button>
-                        <button>SNS사진</button>
-                        <button>동영상</button>
-                        <button>인용구</button>
-                        <button>구분선</button>
-                        <button>파일</button>
+                        <label><i class="fas fa-image" ></i><p>사진</p></label>
+                        <label><i class="fas fa-cloud-download-alt"></i><p>SNS사진</p></label>
+                        <label><i class="fas fa-video"></i><p>동영상</p></label>
+                        <label><button>인용구</button><p></p></label>
+                        <label><i class="fas fa-grip-lines"></i><p>구분선</p></label>
+                        <label><i class="fas fa-save"></i><p>파일</p></label>
                     </div>
                     <div class="contentFont">
-                        <button>본문</button>
-                        <button>기본서체</button>
-                        <button>텍스트크기</button>
-                        <button>l</button>
-                        <button>B</button>
-                        <button>U</button>
-                        <button>T</button>
-                        <button>T</button>
-                        <button>T</button>
-                        <button>=</button>
-                        <button>-</button>
-                        <button>-</button>
-                        <button>#</button>
+                        <select name="baseFont" id="baseFont">
+                            <option value="1">본문</option>
+                            <option value="2">인용구</option>
+                        </select>
+                        <select name="baseFont" id="baseFont">
+                            <option value="1">기본서체</option>
+                            <option value="2">나눔고딕</option>
+                            <option value="3">나눔명조</option>
+                            <option value="4">나눔바른고딕</option>
+                            <option value="5">나눔스퀘어</option>
+                            <option value="6">마루부리</option>
+                            <option value="7">다시시작해</option>
+                            <option value="8">바른히피</option>
+                            <option value="9">우리딸손글씨</option>
+                        </select>
+                        <select name="fontSize" id="fontSize">
+                            <option value="11">11</option>
+                            <option value="13">13</option>
+                            <option value="15" selected>15</option>
+                            <option value="16">16</option>
+                            <option value="19">19</option>
+                            <option value="24">24</option>
+                            <option value="28">28</option>
+                            <option value="30">30</option>
+                            <option value="34">34</option>
+                            <option value="38">38</option>
+                        </select>
+                        <button class="fontButton" style="font-weight: bolder;">B</button>
+                        <button class="fontButton" style="font-style: italic;">l</button>
+                        <button class="fontButton" style="text-decoration: underline;">U</button>
+                        <button class="fontButton" style="text-decoration: line-through;">T</button>
+                        <button class="fontButton" >T</button>
+                        <button class="fontButton">T</button>
+                        <button class="fontButton">=</button>
+                        <button class="fontButton">-</button>
+                        <button class="fontButton">※</button>
+                        <button class="fontButton">#</button>
                     </div>
                     <textarea name="content" id="contentText" cols="30" rows="10" placeholder="내용"></textarea>
                     <input type="text" id="tagAdd" placeholder="태그를 입력해주세요">
@@ -94,20 +139,18 @@
         </section>
         <div class="section_nav">
             <div class="openopstion">
-                공개설정   
+                <h3>공개설정</h3>
+                <label><input type="checkbox" name="openopstion">전체공개</label>
+                <label><input type="checkbox" name="openopstion">회원공개</label>
             </div>
                 <div class="commentOpstion">
-                    <label><input type="checkbox">댓글허용</label>
                     <label><input type="checkbox">블로그,카페공유허용</label>
                     <label><input type="checkbox">외부공유허용</label>
                     <label><input type="checkbox">복사저장허용</label>
-                    <label><input type="checkbox">자동출처사용</label>
-                    <label><input type="checkbox">ccl사용</label>
                 </div>
         </div>
     </main>
 
-    <!-- 하단 -->
     <footer>
         <ul class="menu">
             <li>개인정보취급방침</li>
