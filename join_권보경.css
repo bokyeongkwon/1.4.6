@@ -18,7 +18,7 @@ header{
     align-items: center;
 }
 
-
+/* 상단 메뉴 */
 ul{
     list-style: none;
     display: flex;
@@ -29,11 +29,13 @@ ul{
     font-size: 25px;
 }
 
+/* 우측 상단 아이콘 */
 .icon li{
     margin:8px 12px;
     font-size: 30px;
 }
 
+/* 검색창 */
 .search{
     height: 40px;
     width: 25%;
@@ -51,8 +53,12 @@ ul{
 .search.button{
     height: 35px;
     width: 50px;
+<<<<<<< HEAD
+=======
     line-height: 35px;
+>>>>>>> 17c5c0d2e19991803bb3ffc48a8fe144ffc64099
     padding-left: 10px;
+    line-height: 35px;
     font-size: 16px;
 }
 

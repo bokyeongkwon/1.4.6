@@ -1,4 +1,4 @@
-codec*{  
+*{  
   padding: 0;
   margin: 0;
   /* border: 1px solid red; */
@@ -10,16 +10,15 @@ a{
   color: #000;
 }
 header{
-  margin: 15px auto;
   height: 100px;
   width: 80%;
+  margin: 15px auto;
   display: flex;
   justify-content: space-between;
-  /* justify-content: space-around; */
   align-items: center;
 }
 
-
+/* 상단 메뉴 */
 ul{
   list-style: none;
   display: flex;
@@ -30,34 +29,35 @@ ul{
   font-size: 25px;
 }
 
+/* 우측 상단 아이콘 */
 .icon li{
   margin:8px 12px;
   font-size: 30px;
 }
 
+/* 검색창 */
 .search{
-  width: 25%;
   height: 40px;
-  display: flex;
+  width: 25%;
   margin: 0 auto;
-  /* border: 1px solid black; */
+  display: flex;
 }
 
 .search.textbox{
-  width: 80%;
   height: 30px;
+  width: 80%;
   text-align:start;
   font-size: 25px;
-  /* border: 1px solid black; */
 }
 
 .search.button{
-  width: 50px;
   height: 35px;
-  line-height: 35px;
+  width: 50px;
   padding-left: 10px;
+  line-height: 35px;
   font-size: 16px;
 }
+
 /* 로그인 구현 페이지 */
 section {
   background-color: white;
@@ -157,6 +157,14 @@ article {
   flex-direction: row;
   justify-content: space-between;
   font-size: 17px;
+}
+
+/* 하단 */
+footer>ul{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 /* @media screen and (max-width:400px) {
