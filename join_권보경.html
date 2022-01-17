@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d4b88f7572.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="join_권보경.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="logo.jpg" alt="" width="150px" height="100px"></div>
+        <nav>
+            <ul class="menu">
+                <li>분야별 레시피</li>
+                <li>|</li>
+                <li>테마별 레시피</li>
+                <li>|</li>
+                <li>사진 팁</li>
+                <li>|</li>
+                <li>홈베이킹 클래스</li>
+                <li>|</li>
+                <li>Q&A</li>
+                <li>|</li>
+                <li>자유게시판</li>
+            </ul>
+        </nav>
+        <div class="icon">
+            <ul>
+                <li ><a href="#" class="searchBtn"><i class="fas fa-search"></i></a></li>
+                <li><i class="far fa-user"></i></li>
+                <li><i class="fas fa-bars"></i></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container_search">
+        <!-- <div></div>
+        <div></div> -->
+        <div class="search">
+            <input class="search textbox" type="text" placeholder="검색어를 입력하세요.">
+            <button class="search button">검색</button>
+        </div>
+    </div>
+    <main>
+        <div class="member_join">
+            <b>회원가입</b>
+        </div>
+        <p class="essential">필수입력사항</p>
+        <div class="member_e">
+            <div class="content m_name">
+                <div class="item name">이름</div>
+                <div class="item2"><input type="text" name="m_e_name" class="m_e_name"></div>
+            </div>
+            <div class="content m_id">
+                <div class="item id">아이디</div>
+                <div class="item2">
+                    <input type="text" name="m_e_id" class="m_e_id">
+                    <button class="id_chk">중복확인</button>
+                </div>
+            </div>
+            <div class="content m_pwd">
+                <div class="item pwd">비밀번호</div>
+                <div class="item2"><input type="text" name="m_e_pwd" class="m_e_pwd"></div>
+            </div>
+            <div class="content m_pwd_chk">
+                <div class="item pwd_chk">비밀번호 확인</div>
+                <div class="item2"><input type="text" name="m_e_pwd_chk" class="m_e_pwd_chk"></div>
+            </div>
+            <div class="content m_phone">
+                <div class="item phone">연락처</div>
+                <div class="item2">
+                    <input type="text" name="m_phone1" class="m_e_phone">
+                    <span class="dash">-</span>
+                    <input type="text" name="m_phone2" class="m_e_phone">
+                    <span class="dash">-</span>
+                    <input type="text" name="m_phone3" class="m_e_phone">
+                </div>
+            </div>
+            <div class="content m_email">
+                <div class="item email">이메일</div>
+                <div class="item2">
+                    <input type="text" name="m_e_email" class="m_e_email">
+                    <button class="email_chk">중복확인</button>
+                </div>
+            </div>
+            <div class="content m_birth">
+                <div class="item birth">생년월일</div>
+                <div class="item2">
+                    <select name="m_year_of_birth" id="year_of_birth">
+                        <option value selected="selected">년도</option>
+                    </select>
+                    <span class="birth_s">년</span>
+                    <select name="m_month_of_birth" id="month_of_birth">
+                        <option value selected="selected">월</option>
+                    </select>
+                    <span class="birth_s">월</span>
+                    <select name="m_day_of_birth" id="day_of_birth">
+                        <option value selected="selected">일</option>
+                    </select>
+                    <span class="birth_s">일</span>
+                </div>
+            </div>
+            <div class="content m_sex">
+                <div class="item male">성별</div>
+                <div class="item2">
+                    <label for="male">남성</label>
+                    <input type="radio" name="m_e_sex" id="male">
+                    <label for="female">여성</label>
+                    <input type="radio" name="m_e_sex" id="female" checked="checked">
+                </div>
+            </div>
+            <div class="content m_address">
+                <div class="item saddress">주소</div>
+                <div class="item2"><button class="m_e_address">주소찾기</button></div>
+            </div>
+        </div>
+        <p class="unessential">선택입력사항</p>
+        <div class="member_ue">
+            <div class="content ue_nickname">
+                <div class="item nickname">닉네임</div>
+                <div class="item2"><input type="text" name="m_ue_nickname" class="m_ue_nickname"></div>
+            </div>
+            <div class="content ue_blog">
+                <div class="item blog">홈페이지</div>
+                <div class="item2"><input type="text" name="m_ue_blog" class="m_ue_blog"></div>
+            </div>
+        </div>
+        <div class="join_cafe">
+            <button class="cafe"><b>가입하기</b></button>
+        </div>
+    </main>
+
+    <footer>
+        <ul class="menu">
+            <li>개인정보취급방침</li>
+            <li>|</li>
+            <li>회원약관</li>
+            <li>|</li>
+            <li>공정위확인</li>
+            <li>|</li>
+            <li>쇼핑몰 고객센터</li>
+            <li>|</li>
+            <li>000-111-2222</li>
+        </ul>
+    </footer>
+</body>
+</html>

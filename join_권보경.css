@@ -1,0 +1,149 @@
+*{  
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+    /* font-family: 'Gamja Flower', cursive; */
+    /* background-color: #F7EEE3; */
+}
+
+a{
+    color: #000;
+}
+header{
+    margin: 15px auto;
+    height: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu>li{
+    margin:8px 12px;
+    font-size: 25px;
+}
+
+.icon li{
+    margin:8px 12px;
+    font-size: 30px;
+}
+
+.search{
+    display: flex;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    width: 25%;
+    height: 40px;
+}
+
+.search.textbox{
+    /* border: 1px solid black; */
+    text-align:start;
+    height: 30px;
+    width: 80%;
+    font-size: 25px;
+}
+
+.search.button{
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+main{
+    width: 70%;
+    margin: 50px auto;   
+}
+
+.member_join{
+    font-size: xx-large;
+    letter-spacing: 10px;
+    padding: 20px 0;
+    
+}
+
+.essential{
+    height: 30px;
+    background-color: #e5d0b5;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.content{
+    display: flex;
+}
+
+.item{
+    width: 15%;
+    height: 30px;
+    padding: 10px 10px;
+    line-height: 30px;
+    border: none;
+    border-bottom: 1px solid #dedede;
+    background-color: #f0f0f0;
+}
+
+.item2{
+    height: 30px;
+    padding: 10px 10px;
+}
+
+.member_e{
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
+
+.unessential{
+    height: 30px;
+    background-color: #e5d0b5;
+    line-height: 30px;
+    margin: 20px 0;
+    padding-left: 10px;
+}
+
+.member_ue{
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
+.join_cafe{
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cafe{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #a7cebc;
+    border: none;
+    color: #f0f0f0;
+}
+
+footer{
+    border: 1px solid darkgreen;
+}
+
+footer>ul{
+    /* background-color: darkgrey; */
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+

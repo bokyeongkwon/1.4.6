@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d4b88f7572.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="게시판_이한봄.css">
+    <title>게시판 페이지</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="logo.jpg" alt="" width="150px" height="100px"></div>
+        <nav>
+            <ul class="menu">
+                <li>분야별 레시피</li>
+                <li>|</li>
+                <li>테마별 레시피</li>
+                <li>|</li>
+                <li>사진 팁</li>
+                <li>|</li>
+                <li>홈베이킹 클래스</li>
+                <li>|</li>
+                <li>Q&A</li>
+                <li>|</li>
+                <li>자유게시판</li>
+            </ul>
+        </nav>
+        <div class="icon">
+            <ul class="icon_ul">
+                <li ><a href="#" class="searchBtn"><i class="fas fa-search"></i></a></li>
+                <li><i class="far fa-user"></i></li>
+                <li><i class="fas fa-bars"></i></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container_search">
+        <!-- <div></div>
+        <div></div> -->
+        <div class="search">
+            <input class="search textbox" type="text" placeholder="검색어를 입력하세요.">
+            <button class="search button">검색</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- 왼쪽 배너 -->
+        <div id="leftBanner_wrapper">
+            <!-- 배너 제목 -->
+            <div id="leftBanner_title">title</div>
+            <ul class="leftBanner_ul">
+                <li class="leftBanner_li"><a href="" class="leftLi_a">menu1</a></li>
+                <li class="leftBanner_li"><a href="" class="leftLi_a" id="onclick_ex">menu2</a></li>
+                <li class="leftBanner_li"><a href="" class="leftLi_a">menu3</a></li>
+                <li class="leftBanner_li"><a href="" class="leftLi_a">menu4</a></li>
+                <li class="leftBanner_li"><a href="" class="leftLi_a">menu5</a></li>
+            </ul>
+        </div>
+        <!-- 게시판 -->
+        <div class="content_page">
+            <!-- 본문 -->
+            <div class="content">
+                <!-- 포스트. 예시는 투박하게 두더라도 추후 리팩토링 필수 -->
+                <div class="item">
+
+                    <div class="post">
+                        <div class="img">image</div>
+                        <div class="caption">
+                            <div class="postTitle">제목</div>
+                            <div class="info">
+                                <span class="memId">By "회원명"</span>
+                                <span class="uploadTime">(업로드 날짜)</span>
+                            </div>
+                            <button class="bookmark">즐겨찾기</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="post">
+                        <div class="img">image</div>
+                        <div class="caption">
+                            <div class="postTitle">제목</div>
+                            <div class="info">
+                                <span class="memId">By "회원명"</span>
+                                <span class="uploadTime">(업로드 날짜)</span>
+                            </div>
+                            <button class="bookmark">즐겨찾기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post">
+                        <div class="img">image</div>
+                        <div class="caption">
+                            <div class="postTitle">제목</div>
+                            <div class="info">
+                                <span class="memId">By "회원명"</span>
+                                <span class="uploadTime">(업로드 날짜)</span>
+                            </div>
+                            <button class="bookmark">즐겨찾기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post">
+                        <div class="img">image</div>
+                        <div class="caption">
+                            <div class="postTitle">제목</div>
+                            <div class="info">
+                                <span class="memId">By "회원명"</span>
+                                <span class="uploadTime">(업로드 날짜)</span>
+                            </div>
+                            <button class="bookmark">즐겨찾기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post">
+                        <div class="img">image</div>
+                        <div class="caption">
+                            <div class="postTitle">제목</div>
+                            <div class="info">
+                                <span class="memId">By "회원명"</span>
+                                <span class="uploadTime">(업로드 날짜)</span>
+                            </div>
+                            <button class="bookmark">즐겨찾기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post">
+                        <div class="img">image</div>
+                        <div class="caption">
+                            <div class="postTitle">제목</div>
+                            <div class="info">
+                                <span class="memId">By "회원명"</span>
+                                <span class="uploadTime">(업로드 날짜)</span>
+                            </div>
+                            <button class="bookmark">즐겨찾기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post">
+                        <div class="img">image</div>
+                        <div class="caption">
+                            <div class="postTitle">제목</div>
+                            <div class="info">
+                                <span class="memId">By "회원명"</span>
+                                <span class="uploadTime">(업로드 날짜)</span>
+                            </div>
+                            <button class="bookmark">즐겨찾기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="post">
+                        <div class="img">image</div>
+                        <div class="caption">
+                            <div class="postTitle">제목</div>
+                            <div class="info">
+                                <span class="memId">By "회원명"</span>
+                                <span class="uploadTime">(업로드 날짜)</span>
+                            </div>
+                            <button class="bookmark">즐겨찾기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 게시판 하단 쪽번호, 검색창 -->
+            <div id="page_navi">
+                <div id="dom_page"><span class="pageNo">1</span></div>
+                <div id="page_search_bar">
+                    <input type="text" name="scan_page" id="scan_page">페이지로<button id="page_search_btn">바로가기</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 게시판 최하단. 게시글 검색, 기타 등등 -->
+    <div id="post_search_bar">
+        <form action="">
+            <select name="post_filter" id="post_filter">
+                <option value="title">제목</option>
+                <option value="author">작성자</option>
+                <option value="mixed">제목+내용</option>
+            </select>
+            <input type="text" name="scan_post" id="scan_post"><button id="post_search_btn">검색</button>
+        </form>
+    </div>
+
+    <footer>
+        <ul class="menu">
+            <li>개인정보취급방침</li>
+            <li>|</li>
+            <li>회원약관</li>
+            <li>|</li>
+            <li>공정위확인</li>
+            <li>|</li>
+            <li>쇼핑몰 고객센터</li>
+            <li>|</li>
+            <li>000-111-2222</li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

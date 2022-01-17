@@ -1,0 +1,159 @@
+*{  
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+    /* font-family: 'Gamja Flower', cursive; */
+    /* background-color: #F7EEE3; */
+}
+
+a{
+    color: #000;
+}
+header{
+    margin: 15px auto;
+    height: 100px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu>li{
+    margin:8px 12px;
+    font-size: 25px;
+}
+
+.icon li{
+    margin:8px 12px;
+    font-size: 30px;
+}
+
+article{
+    /* border: 1px solid red; */
+    margin: 50px auto;
+    width: 60%;
+}
+
+.search{
+    display: flex;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    width: 25%;
+    height: 40px;
+}
+
+.search.textbox{
+    /* border: 1px solid black; */
+    text-align:start;
+    height: 30px;
+    width: 80%;
+    font-size: 25px;
+}
+
+.search.button{
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+
+.recommend{
+    background-color: #ffc8b4;
+    margin: 0 auto;
+    height: 500px; 
+    font-size: 35px;
+}
+
+section{
+    /* border: 1px solid blue; */
+    width: 60%;
+    height: 150px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.announceIcon{
+    font-size: 80px;
+}
+
+.announceText{
+    font-size: 25px;
+}
+
+.post{
+    /* border: 1px solid rsed; */
+    width: 80%;
+    margin: 50px auto;
+    display:flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+
+.post>.content>.name{
+    font-size: 25px;
+}
+.mainbox{
+    width: 350px;
+    /* border: 1px solid coral; */
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.rank{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: #e5d0b5;
+}
+
+.rank>li{
+    /* border: 1px solid chocolate; */
+    display: flex;
+    margin: 10px;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+
+.post .picture{
+    width: 75px;
+    height: 75px;
+    background-color: #bb871e;
+    margin-left: 5px;
+}
+
+.rightText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+/* .rightText>.nickname{
+    background-color: blueviolet;
+
+} */
+
+footer{
+    border: 1px solid darkgreen;
+}
+
+footer>ul{
+    /* background-color: darkgrey; */
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
