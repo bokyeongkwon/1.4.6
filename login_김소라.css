@@ -1,4 +1,4 @@
-c*{  
+codec*{  
   padding: 0;
   margin: 0;
   /* border: 1px solid red; */
@@ -36,19 +36,19 @@ ul{
 }
 
 .search{
-  display: flex;
-  /* border: 1px solid black; */
-  margin: 0 auto;
   width: 25%;
   height: 40px;
+  display: flex;
+  margin: 0 auto;
+  /* border: 1px solid black; */
 }
 
 .search.textbox{
-  /* border: 1px solid black; */
-  text-align:start;
-  height: 30px;
   width: 80%;
+  height: 30px;
+  text-align:start;
   font-size: 25px;
+  /* border: 1px solid black; */
 }
 
 .search.button{
@@ -64,35 +64,35 @@ section {
 }
 /* 로그인 윗부분 여백 */
 .margin-top {
-  background: white;
   width: 100%;
   height: 80px;
+  background: white;
 }
 /* 로그인 전체 범위 */
 article {
-  margin: 0 auto;
   width: 700px;
+  margin: 0 auto;
 }
 /* 로그인 상단 */
 .login-title {
-  background-color: wheat;
-  padding-left: 25px;
   height: 50px;
+  padding-left: 25px;
   color: brown;
   line-height: 50px;
   font-size: 20px;
+  background-color: wheat;
 }
 /* 로그인 내용 */
 .login-body {
+  height: 280px;
   display: flex;
   background-color: beige;
-  height: 280px;
 }
 /* 왼쪽 영역 */
 .login-body1 {
-  padding-top: 40px;
   height: 200px;
   width: 50%;
+  padding-top: 40px;
   text-align: center;
 }
 /* 아이디, 비밀번호 */
@@ -108,16 +108,16 @@ article {
 }
 /* 로그인 버튼 */
 .login-button {
-  width: 300px;
   height: 45px;
-  background-color: orange;
+  width: 300px;
   border: 1px solid silver;
+  background-color: orange;
 }
 /* 자동로그인, 로그인저장 */
 .login-checkbox {
+  margin-top: 15px;
   display: flex;
   justify-content: space-evenly;
-  margin-top: 15px;
 }
 /* 로그인 내용 좌우 구분선 */
 .line-border {
@@ -127,10 +127,10 @@ article {
 }
 /* 오른쪽 영역 */
 .login-body2 {
-  display: flex;
-  flex-direction: column;
   width: 50%;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 /* SNS 외부 API */
@@ -140,22 +140,22 @@ article {
 .login-naver,
 .login-kakao,
 .login-facebook {
-  margin-bottom: 5px;
-  width: 300px;
   height: 60px;
+  width: 300px;
+  margin-bottom: 5px;
 }
 /* 로그인 하단 */
 .login-bottom {
-  text-align: center;
   width: 50%;
   margin: 0 auto;
+  text-align: center;
 }
 /* 회원가입, 아이디/비밀번호 찾기 */
 .login-text {
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 20px;
   font-size: 17px;
 }
 
