@@ -19,7 +19,8 @@ header{
 }
 
 /* 상단 메뉴 */
-ul{
+.icon_ul,
+.menu{
   list-style: none;
   display: flex;
 }
@@ -60,6 +61,7 @@ ul{
 
 /* 로그인 구현 페이지 */
 section {
+  margin-top: 50px;
   background-color: white;
 }
 /* 로그인 윗부분 여백 */
@@ -152,7 +154,7 @@ article {
 }
 /* 회원가입, 아이디/비밀번호 찾기 */
 .login-text {
-  margin-top: 20px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -160,6 +162,11 @@ article {
 }
 
 /* 하단 */
+footer{
+  margin-top: 150px;
+  border-top: 1px solid darkgreen;
+}
+
 footer>ul{
   width: 80%;
   margin: 0 auto;
