@@ -19,9 +19,10 @@ header{
 }
 
 /* 상단 메뉴 */
-ul{
-    list-style: none;
-    display: flex;
+.icon_ul,
+.menu{
+  list-style: none;
+  display: flex;
 }
 
 .menu>li{
