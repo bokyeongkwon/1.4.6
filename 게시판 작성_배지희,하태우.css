@@ -1,8 +1,9 @@
 *{  
   padding: 0;
   margin: 0;
+  /* border: 1px solid red; */
   /* font-family: 'Gamja Flower', cursive; */
-  /* background-color: #F7EEE3; */
+  /* background-color: #F7EEE3 */
 }
 
 a{
@@ -10,15 +11,14 @@ a{
 }
 
 header{
-  height: 100px;
   width: 80%;
+  height: 100px;
   margin: 15px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* 상단 메뉴 */
 ul{
   list-style: none;
   display: flex;
@@ -29,58 +29,68 @@ ul{
   font-size: 25px;
 }
 
-/* 우측 상단 아이콘 */
 .icon li{
   margin:8px 12px;
   font-size: 30px;
 }
 
-/* 검색창 */
 .search{
-  height: 40px;
   width: 25%;
+  height: 40px;
   margin: 0 auto;
   display: flex;
+  /* border: 1px solid black; */
 }
 
 .search.textbox{
-  height: 30px;
+  /* border: 1px solid black; */
   width: 80%;
-  text-align:start;
+  height: 30px;
   font-size: 25px;
+  text-align:start;
 }
 
 .search.button{
-  height: 35px;
   width: 50px;
-  padding-left: 10px;
+  height: 35px;
   line-height: 35px;
+  padding-left: 10px;
   font-size: 16px;
 }
 
 
 main{
   width: 60%;
-  display: flex;
   margin: 0 auto;
+  display: flex;
 }
 section{
   width: 80%;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+}
+section *{
+  margin: 5px 0;
 }
 .sectionINsection{
-  border: black 1px solid;
+  /* border: black 1px solid; */
   padding: 10px;
 }
 .section_header{
   display: flex;
   justify-content: space-between;
+  font-size: 1.5em;
+  font-weight: bolder;
 }
 .임시{
   display: flex;
   justify-content: space-between;
+  align-items :center
+  
+}
+#boardCho{
+  height: min-content;
 }
 #inputTitle{
   width: 100%;
@@ -90,11 +100,23 @@ section{
   background-color: gainsboro;
   border: gray 1px solid;
   padding: 2px;
+  display: flex;
+}
+.input>label{
+  font-size: 0.5em;
+  text-align: center;
+  margin: 5px;
 }
 .contentFont{
+  padding: 2px;
   background-color: gainsboro;
   border: gray 1px solid;
-  padding: 2px;
+}
+.fontButton{
+  width: 20px;
+  background-color: gainsboro;
+  border-color: gainsboro;
+  border-style: none;
 }
 #contentText{
   width: 100%;
@@ -115,18 +137,23 @@ section{
 }
 .openopstion{
   width: 95%;
-  background-color: silver;
-  border-radius: 3px;
   margin: 5px;
-  font-size: 1.5em;
-}
-.commentOpstion{
+  border-radius: 3px;
   display: flex;
   flex-direction: column;
-  width: 95%;
   background-color: silver;
-  border-radius: 3px;
+}
+.openopstion>label{
+  margin: 10px;
+  text-align: left;
+}
+.commentOpstion{
+  width: 95%;
   margin: 5px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  background-color: silver;
 }
 .commentOpstion>label{
   margin: 10px;
@@ -139,8 +166,8 @@ footer{
 
 footer>ul{
   /* background-color: darkgrey; */
-  margin: 0 auto;
   width: 80%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 }
