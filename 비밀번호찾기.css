@@ -1,0 +1,108 @@
+*{  
+  padding: 0;
+  margin: 0;
+}
+a{
+  color: #000;
+}
+/* 상단 메뉴 */
+header{
+  width: 100%;
+  height: 35px;
+  display: flex;
+  background-color: orange;
+}
+/* 비밀번호 찾기 순서 보여주는창 */
+.center{
+  display: flex;
+  justify-content: center;
+}
+.order{
+  margin-top: 100px;
+  width: 700px;
+}
+.orderTop{
+  display: flex;
+  justify-content: space-between;
+}
+.big{
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.small1,
+.small2{
+  font-size: 0.5em;
+}
+.small1{
+  text-align: right;
+}
+/* 비밀번호 찾기 윗부분 여백 */
+.margin-top {
+  width: 100%;
+  height: 15px;
+  background: white;
+}
+/* 비밀번호 찾기 전체 범위 */
+article {
+  width: 700px;
+  margin: 0 auto;
+}
+/* 상단 */
+.title {
+  height: 50px;
+  padding-left: 25px;
+  color: brown;
+  line-height: 50px;
+  font-size: 20px;
+  background-color: wheat;
+}
+/*  내용 */
+.id-body {
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  background-color: beige;
+}
+/* 아이디 입력 영역 */
+.id-body1 {
+  height: 200px;
+  width: 50%;
+  padding-top: 40px;
+  text-align: center;
+}
+/* 아이디 입력 */
+.id-class{
+  padding-bottom: 10px;
+}
+.id-textbox{
+  width: 300px;
+  height: 45px;
+  border: 1px solid silver;
+}
+/* 다음 버튼 */
+.next{
+  margin-top: 90px;
+}
+.next-button {
+  height: 45px;
+  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid silver;
+  background-color: orange;
+}
+/* 하단 */
+.bottom {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* 아이디찾기 바로가기 */
+.text {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+}
