@@ -1,0 +1,205 @@
+*{  
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid red; */
+  /* font-family: 'Gamja Flower', cursive; */
+  /* background-color: #F7EEE3; */
+}
+
+a{
+  color: #000;
+}
+header{
+  height: 100px;
+  width: 80%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 상단 메뉴 */
+.icon_ul,
+.menu{
+  list-style: none;
+  display: flex;
+}
+
+.menu>li{
+  margin:8px 12px;
+  font-size: 25px;
+}
+
+/* 우측 상단 아이콘 */
+.icon li{
+  margin:8px 12px;
+  font-size: 30px;
+}
+
+/* 검색창 */
+.search{
+  height: 40px;
+  width: 25%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.search.textbox{
+  height: 30px;
+  width: 80%;
+  text-align:start;
+  font-size: 25px;
+}
+
+.search.button{
+  height: 35px;
+  width: 50px;
+  padding-left: 10px;
+  line-height: 35px;
+  font-size: 16px;
+}
+
+/* 아이디찾기 구현 시작 */
+/* 아이디찾기 전체 */
+article {
+  height: 360px;
+  width: 450px;
+  margin: 0 auto;
+  background-color: beige;
+}
+
+/* 아이디찾기 헤드 */
+.idFind-top {
+  height: 50px;
+  margin-top: 40px;
+  padding-left: 25px;
+  color: brown;
+  line-height: 50px;
+  font-size: 20px;
+  background-color: antiquewhite;
+}
+.text1 {
+  color: rgb(114, 62, 62);
+  font-weight: bold;
+  font-size: 20px;
+}
+.text2 {
+  color: rgb(114, 62, 62);
+  font-size: 11px;
+}
+
+/* 휴대폰으로 찾기(선택1) */
+.idFind-phone {
+  margin-top: 20px;
+}
+.idFind-phoneText {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* 선택할 항목 스타일 */
+/* 체크 안했을 때 */
+/* 아이콘 */
+summary::marker{
+  content: ' \2610';
+}
+/* 내용 */
+details {
+  color: rgb(99, 78, 78);
+  font-weight: bold;
+}
+details summary {
+  margin-left: 25px;
+  padding: 5px;
+}
+/* 체크했을 때 */
+/* 아이콘 */
+details[open] summary::marker {
+  color: red;
+  content: ' \2611';
+}
+/* 내용 */
+details[open] {
+  color: red;
+  font-weight: bold;
+}
+details[open] summary {
+  margin-left: 25px;  
+}
+
+/* 정보 입력란 */
+li {
+  list-style-type: none;
+}
+.text-name,
+.textInfo {
+  height: 45px;
+  width: 380px;
+  margin-top: 10px;
+  padding-left: 10px;
+  font-size: 15px;
+  border: 1px solid silver;
+}
+/* 정보 입력 버튼 */
+.findID-button {
+  height: 45px;
+  width: 392px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-size: 15px;
+  border: none;
+  background-color: orange;
+}
+
+/* 이메일로 찾기(선택2) */
+.idFind-email {
+
+}
+.idFind-emailText {
+  text-align: center;
+}
+/* 아이디찾기 구현 종료 */
+
+/* 하단 */
+footer{
+  margin-top: 150px;
+  border-top: 1px solid darkgreen;
+}
+
+footer>ul{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* @media screen and (max-width:400px) {
+  article {
+    width: 350px;
+  }
+  .login-body {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+  }
+  .login-body1 {
+    width: 350px;
+    text-align: center;
+  }
+  .id-textbox,
+  .pw-textbox {
+    width: 300px;
+  }
+  .login-button {
+    width: 300px;
+  }
+  .login-body2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .line-border {
+    display: none;
+  }
+} */
