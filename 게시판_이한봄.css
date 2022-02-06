@@ -114,12 +114,6 @@ main {
     text-decoration: none;
 }
 
-/* .leftLi_a:hover {
-    color: white;
-    background-color: cornflowerblue;
-    border-radius: 5px;
-} */
-
 /* 클릭하면 메뉴 색깔이 바뀌고 해당 페이지로 넘어가며, 색이 바뀐 상태를 유지한다. 구체적인 형태는 미정 */
 #onclick_ex{
     border-radius: 5px;
