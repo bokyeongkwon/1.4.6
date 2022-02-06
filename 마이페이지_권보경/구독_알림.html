@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d4b88f7572.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="구독_알림.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- 로고 -->
+        <div class="logo"><img src="/logo.jpg" alt="" width="150px" height="100px"></div>
+        <!-- 상단 메뉴 -->
+        <nav>
+            <ul class="menu">
+                <li>분야별 레시피</li>
+                <li>|</li>
+                <li>테마별 레시피</li>
+                <li>|</li>
+                <li>사진 팁</li>
+                <li>|</li>
+                <li>홈베이킹 클래스</li>
+                <li>|</li>
+                <li>Q&A</li>
+                <li>|</li>
+                <li>자유게시판</li>
+            </ul>
+        </nav>
+        <!-- 우측상단 아이콘 -->
+        <div class="icon">
+            <ul class="icon_ul">
+                <li ><a href="#" class="searchBtn"><i class="fas fa-search"></i></a></li>
+                <li><i class="far fa-user"></i></li>
+                <li><i class="fas fa-bars"></i></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 검색창 -->
+    <div class="container_search">
+        <div class="search">
+            <input class="search textbox" type="text" placeholder="검색어를 입력하세요.">
+            <button class="search button">검색</button>
+        </div>
+    </div>
+
+    <main>
+        <!-- 왼쪽 카테고리 -->
+        <div id="leftCategory">
+            <div id="leftCategory_title">마이 페이지</div>
+            <ul class="leftCategory_ul">
+                <li class="leftCategory_li"><a href="" class="leftLi_a" id="subscribeList">구독 / 알림</a></li>
+                <li class="leftCategory_li"><a href="" class="leftLi_a" id="likeList">관심리스트</a></li>
+                <li class="leftCategory_li"><a href="" class="leftLi_a" id="reportList">신고 내역</a></li>
+                <li class="leftCategory_li"><a href="" class="leftLi_a" id="postingList">게시물 / 댓글</a></li>
+            </ul>
+        </div>
+        <!-- 본문 -->
+        <div class="scbLiWrap">
+            <div class="scbLiMenu">구독 / 알림</div>
+            <div class="scbLiMain_top">
+                <div class="scbNum">번호</div>
+                <span>|</span>
+                <div class="scbNick">닉네임</div>
+                <span>|</span>
+                <div class="scbNew">최근 게시물</div>
+                <span>|</span>
+                <div class="scbAlarm">알림 설정</div>
+            </div>
+            <div class="scbLiMain_med">
+                <div class="item item1">
+                    <div class="scbNum">1</div>
+                    <div class="scbNick">닉네임</div>
+                    <div class="scbNew">최근 게시물</div>
+                    <div class="scbAlarm"><i class="fas fa-bell"></i></div>
+                </div>
+                <div class="item item2">
+                    <div class="scbNum">2</div>
+                    <div class="scbNick">닉네임</div>
+                    <div class="scbNew">최근 게시물</div>
+                    <div class="scbAlarm"><i class="fas fa-bell"></i></div>
+                </div>
+                <div class="item item3">
+                    <div class="scbNum">3</div>
+                    <div class="scbNick">닉네임</div>
+                    <div class="scbNew">최근 게시물</div>
+                    <div class="scbAlarm"><i class="fas fa-bell"></i></div>
+                </div>
+                <div class="item item4">
+                    <div class="scbNum">4</div>
+                    <div class="scbNick">닉네임</div>
+                    <div class="scbNew">최근 게시물</div>
+                    <div class="scbAlarm"><i class="far fa-bell"></i></div>
+                </div>
+                <div class="item item5">
+                    <div class="scbNum">5</div>
+                    <div class="scbNick">닉네임</div>
+                    <div class="scbNew">최근 게시물</div>
+                    <div class="scbAlarm"><i class="far fa-bell"></i></div>
+                </div>
+                <div class="item item6">
+                    <div class="scbNum">6</div>
+                    <div class="scbNick">닉네임</div>
+                    <div class="scbNew">최근 게시물</div>
+                    <div class="scbAlarm"><i class="far fa-bell"></i></div>
+                </div>
+                <div class="item item7">
+                    <div class="scbNum">7</div>
+                    <div class="scbNick">닉네임</div>
+                    <div class="scbNew">최근 게시물</div>
+                    <div class="scbAlarm"><i class="far fa-bell"></i></div>
+                </div>
+            </div>
+            <div class="pageNav">
+                <a href="#"><i class="fas fa-backward"></i></a>
+                <ul>
+                    <li class="pageNum"><a href="#">1</a></li>
+                </ul>
+                <a href="#"><i class="fas fa-forward"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 하단 -->
+    <footer>
+        <ul class="menu">
+            <li>개인정보취급방침</li>
+            <li>|</li>
+            <li>회원약관</li>
+            <li>|</li>
+            <li>공정위확인</li>
+            <li>|</li>
+            <li>쇼핑몰 고객센터</li>
+            <li>|</li>
+            <li>000-111-2222</li>
+        </ul>
+    </footer>
+</body>
+</html>
