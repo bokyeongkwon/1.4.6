@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="classSearch_이한봄.css">
-    <title>클래스 찾기 화면</title>
+    <title>클래스 찾기 화면_1차 수정</title>
 </head>
 
 <body>
@@ -53,23 +53,11 @@
     </div>
 
     <main>
-        <!-- 왼쪽 배너 -->
-        <div id="leftBanner_wrapper">
-            <!-- 배너 제목 -->
-            <div id="leftBanner_title">title</div>
-            <ul class="leftBanner_ul">
-                <li class="leftBanner_li"><a href="" class="leftLi_a">menu1</a></li>
-                <li class="leftBanner_li"><a href="" class="leftLi_a" id="onclick_ex">menu2</a></li>
-                <li class="leftBanner_li"><a href="" class="leftLi_a">menu3</a></li>
-                <li class="leftBanner_li"><a href="" class="leftLi_a">menu4</a></li>
-                <li class="leftBanner_li"><a href="" class="leftLi_a">menu5</a></li>
-            </ul>
-        </div>
         <!-- 게시판 -->
         <div class="content_page">
             <!-- 게시판 상단 현 페이지 주소 표시, 정렬 콤보박스, 글쓰기 버튼 -->
             <div id="page_status">
-                <div id="page_name">Menu2</div>
+                <div id="page_name">지역별 클래스 검색</div>
 
                 <!-- order_wrapper = (order + write_btn) -->
                 <div class="order_wrapper">
@@ -81,8 +69,66 @@
                     <button id="write_btn">글쓰기</button>
                 </div>
             </div>
+
+            
+            <!-- 본문 -->
+            <!-- 지역 선택창 -->
+            <div class="locationBox">
+
+                <div id="metroBox">
+                        <div>전체</div>
+
+                        <div class="metroRow">
+                            <span>서울</span>
+                            <span>부산</span>
+                        </div>
+                        <div class="metroRow">
+                            <span>대구</span>
+                            <span>인천</span>
+                        </div>
+                        <di class="metroRow"> 
+                            <span>광주</span>
+                            <span>대전</span>
+                        </di>
+                        <div class="metroRow">
+                            <span id="example">울산</span>
+                            <span>세종</span>
+                        </div>
+                        <div class="metroRow">
+                            <span>경기</span>
+                            <span>강원</span>
+                        </div>
+                        <div class="metroRow">
+                            <span>충북</span>
+                            <span>충남</span>
+                        </div>
+                        <div class="metroRow">
+                            <span>전북</span>
+                            <span>전남</span>
+                        </div>
+                        <div class="metroRow">
+                            <span>경북</span>
+                            <span>경남</span>
+                        </div>
+                        <div>제주</div>
+                </div>
+
+                <div id="cityBox">
+                    <div class="cityRow">
+                        <span><input type="checkbox"> 전체</span>
+                        <span><input type="checkbox" checked> 울산 남구</span>
+                        <span><input type="checkbox"> 울산 동구</span>
+                    </div>
+                    <div class="cityRow">
+                        <span><input type="checkbox"> 울산 북구</span>
+                        <span><input type="checkbox"> 울산 울주군</span>
+                        <span><input type="checkbox"> 울산 중구</span>
+                    </div>
+                </div>
+            </div>
+            
             <!-- 본문 지도 불러오기 창-->
-            <div id="mapDisplay">mapAPI display</div>
+            <div id="mapDisplay">mapAPI display, 패딩 미적용 상태</div>
             
             <!-- 지도 아래 게시판 -->
             <ul class="mapBoard">
@@ -139,18 +185,6 @@
                 </li>
 
             </ul>
-            
-
-
-            <!-- 게시판 하단 쪽번호, 검색창 -->
-            <div id="page_navi">
-                <div id="dom_page">
-                    <span class="pageNo">1</span>
-                </div>
-                <div id="page_search_bar">
-                    <input type="text" name="scan_page" id="scan_page">페이지로<button id="page_search_btn">바로가기</button>
-                </div>
-            </div>
 
         </div>
     </main>
