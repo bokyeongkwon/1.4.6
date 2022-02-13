@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="findID_3_김소라.css">
+  <!-- 라디오버튼 선택해 div 보여주기 -->
+  <script>
+    function div_show(selectList) {
+      var obj1 = document.getElementById("type1"); // 휴대폰으로 찾기
+      var obj2 = document.getElementById("type2"); // 이메일로 찾기
+      // 휴대폰으로 찾기 
+      if (selectList == "0") {
+        obj1.style.display = "block";
+        obj2.style.display = "none";
+        // 이메일로 찾기
+      } else if (selectList == "1") {
+        obj1.style.display = "none";
+        obj2.style.display = "block";
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- 상단 메뉴 -->
+  <header>
+    <div class="topMenu">
+      <a class="" href="#">비밀번호 찾기</a>
+      <a class="" href="#">홈으로</a>
+    </div>
+  </header>
+  <!-- 아이디 찾기 시작-->
+  <!-- 헤드(여백 내용) -->
+  <div class="head_blank">
+    <div class="order">
+      <div class="orderTop">
+        <div class="big">아이디 찾기</div>
+      </div>
+      <hr>
+      <div class="small1">정보를 입력해 주세요.</div>
+    </div>
+  </div>
+  <!-- 타이틀 내용 -->
+  <article>
+    <div class="idFind-top">
+      <span class="text1">HOME CA:BE 아이디 찾기</span>
+    </div>
+    <!-- 항목 선택 -->
+    <div class="findID">
+        <ul>
+          <!-- 휴대폰으로 찾기 선택 -->
+          <li class="findID_select">
+            <input type="radio" name="findID_type1" id="findID_type_1" checked="checked" onclick="div_show('0');" value="개인소득공제용">
+            <label for="findID_type_1"><span class="text2">휴대폰으로 찾기</label></span>
+          </li>
+          <!-- 이메일로 찾기 선택 -->
+          <li class="findID_select">
+            <input type="radio" name="findID_type1" id="findID_type_2" onclick="div_show('1');" value="지출증빙용">
+            <label for="findID_type_2"><span class="text3">이메일로 찾기</label></span>
+          </li>
+        </ul>
+      </div>
+      <!-- 선택 항목별 내용 -->
+      <!-- 휴대폰으로 찾기 내용 -->
+      <div id="type1" style="display:none">
+        <ul class="idFind-phoneText">
+          <li>
+            <input type="text" class="text-name" placeholder="  이름">
+          </li>
+          <li>
+            <input type="text" class="textInfo" placeholder="  - 없이 입력">
+          </li>
+          <!-- 선택1 버튼 -->
+          <button type="submit" class="findID-button">확인</button>
+        </ul>
+      </div>
+      <!-- 이메일로 찾기 내용 -->
+      <div id="type2" style="display:none">
+        <ul class="idFind-emailText">
+          <li>
+            <input type="text" class="text-name" placeholder=" 이름">
+          </li>
+          <li>
+            <input type="text" class="textInfo" placeholder=" 이메일">
+          </li>
+          <!-- 선택2 버튼 -->
+          <button type="submit" class="findID-button">확인</button>
+        </ul>
+      </div>
+      </div>
+    </article>
+      <!-- 하단 -->
+      <footer>
+        <div class="bottom-text">
+          <div>비밀번호가 기억나지 않는다면?</div>
+          <div><a href="">&nbsp;비밀번호 찾기&nbsp;</a></div>
+        </div>
+      </footer>  
+</body>
+
+</html>
