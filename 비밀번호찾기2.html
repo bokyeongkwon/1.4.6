@@ -8,6 +8,22 @@
   <title>비밀번호찾기2</title>
   <link rel="stylesheet" href="비밀번호찾기2.css">
 </head>
+<script>
+  function div_show(selectLIst){
+    const phone = document.getElementById("findPhonenumber");    //휴대폰으로 찾기
+    const email = document.getElementById("findEmail"); //이메일로 찾기
+
+    //휴대폰으로 찾기
+    if (selectLIst == "0"){
+      phone.style.display = "block";
+      email.style.display = "none";
+      //이메일로 찾기
+    }else if(selectLIst == "1"){
+      email.style.display = "block";
+      phone.style.display = "none";
+    }
+  }
+</script>
 <body>
   <header>
     <!-- 상단 메뉴 -->
@@ -36,27 +52,36 @@
     <!-- 상단 -->
       <div class="title">HOME CA:BE 비밀번호찾기</div>
       <div class="choice-body">
-    <!-- 본인확인 선택창 -->
-        <div class="choice-body1">
+        <!-- 본인확인 선택창 -->
+        <!-- 휴대폰 라디오버튼 -->
           <div class="choice">
-            <div class="choice1">
-              <input type="radio" id="" name="">
-              휴대전화로 인증
+            <div class="findPhonenumber">
+              <input type="radio" name="findPasswd_type1" id="findPasswd_type1" class="findPhoneclass" value="1" onclick="div_show('0');">
+              <label for="findPasswd_type1">휴대폰으로 찾기</label>
             </div>
-            <div class="choice2">
-              <input type="radio" id="" name="" >
-              본인확인 이메일로 인증
+            <!-- 휴대폰으로 찾기     -->
+            <div id="findPhonenumber" style="display: none;">
+              <input type="text" class="findName" placeholder="이름"><br>
+              <input type="text" class="find" placeholder=" - 없이 입력"><br>
             </div>
-          </div>    
-          <!-- 다음버튼 -->    
-          <div class="next">
-            <a class="next-button" href="비밀번호재설정.html" >다음</a>
+            <!-- 이메일 라디오 버튼 -->
+            <div class="findEmail">
+              <input type="radio" name="findPasswd_type1" id="findPasswd_type2" class="findEmaillass" value="2" onclick="div_show('1');" >
+              <label for="findPasswd_type2">이메일로 찾기</label>
+            </div>
+            <!-- 이메일로 찾기 -->
+            <div id="findEmail" style="display: none;">
+              <input type="text" class="findName" placeholder="이름"><br>
+              <input type="text" class="find" placeholder="이메일">
+            </div>
           </div>
-        </div>
-        
       </div>
       <!-- 하단 -->
       <div class="bottom">
+        <!-- 다음버튼 -->    
+        <div class="next">
+          <a class="next-button" href="비밀번호재설정.html" >다음</a>
+        </div>
         <div class="text">
           <div>비밀번호 찾기시 문제가 있나요?</div>
           <div><a href="">바로가기</a></div>
