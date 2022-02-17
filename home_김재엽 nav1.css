@@ -4,7 +4,7 @@
     margin: 0;
     list-style: none;
     /* font-family: 'Gamja Flower', cursive; */
-    background-color: #fff8ee;
+    background-color: #fcf8f4;
     font-family: 'Jua', sans-serif;
     /* font-family: 'Sunflower', sans-serif; */
     /* font-family: 'Nanum Brush Script', cursive; */
@@ -17,12 +17,16 @@ a{
     display: block;
 }
 
+
 .menuBox1  ul{
-    background-color: #f7eee3;
+    /* background-color: #f7eee3; */
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
+    color: #594440;
 }
 .menuBox1 > ul > li{
+    font-size: 35px;
     /* margin-top: 10px; */
 }
 .menuBox1  ul > li > a{
@@ -48,9 +52,9 @@ a{
 header{
     height: 100px;
     width: 80%;
-    margin: 15px auto;
+    margin: 40px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -58,6 +62,7 @@ header{
 .icon_ul,
 .menu{
   display: flex;
+  color: #523d3a;
 }
 
 .menu>li{
@@ -68,7 +73,7 @@ header{
 /* 우측 상단 아이콘 */
 .icon li{
     margin:8px 12px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 /* 검색창 */
@@ -99,13 +104,13 @@ header{
 
 /* 홈 메인 사진 */
 article{
-    width: 60%;
+    width: 100%;
     margin: 50px auto;
 }
 
 
 .recommend{
-    height: 500px; 
+    height: 700px; 
     margin: 0 auto;
     font-size: 35px;
     background-color: #ffc8b4;

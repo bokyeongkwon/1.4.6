@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d4b88f7572.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="join_권보경.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <!-- 로고 -->
-        <div class="logo"><img src="logo.jpg" alt="" width="150px" height="100px"></div>
+        <div class="logo"><img src="logo.jpg" alt="" width="180px" height="150px"></div>
         <!-- 상단 메뉴 -->
         <nav>
             <ul class="menu">
@@ -42,12 +44,12 @@
     </header>
 
     <!-- 검색창 -->
-    <div class="container_search">
+    <!-- <div class="container_search">
         <div class="search">
             <input class="search textbox" type="text" placeholder="검색어를 입력하세요.">
             <button class="search button">검색</button>
         </div>
-    </div>
+    </div> -->
 
     <!-- 회원가입 화면 -->
     <main>
@@ -69,11 +71,13 @@
                 <div class="item2">
                     <input type="text" name="m_e_id" class="m_e_id">
                     <button class="id_chk">중복확인</button>
+                    <span>영문, 영문 / 숫자 조합 6~20자 입력 가능</span>
                 </div>
             </div>
             <div class="content m_pwd">
                 <div class="item pwd">비밀번호</div>
                 <div class="item2"><input type="text" name="m_e_pwd" class="m_e_pwd"></div>
+                <span>최소 하나의 문자, 하나의 숫자 및 하나의 특수 문자 포함 8~20자 입력 가능</span>
             </div>
             <div class="content m_pwd_chk">
                 <div class="item pwd_chk">비밀번호 확인</div>
@@ -135,6 +139,7 @@
             <div class="content ue_nickname">
                 <div class="item nickname">닉네임</div>
                 <div class="item2"><input type="text" name="m_ue_nickname" class="m_ue_nickname"></div>
+                <button class="email_chk">중복확인</button>
             </div>
             <div class="content ue_blog">
                 <div class="item blog">홈페이지</div>
@@ -151,15 +156,11 @@
     <!-- 하단 -->
     <footer>
         <ul class="menu">
+            <li>HOME CA:BE 운영팀:a@kh.com</li>
+            <li>|</li>
+            <li>이용약관</li>
+            <li>|</li>
             <li>개인정보취급방침</li>
-            <li>|</li>
-            <li>회원약관</li>
-            <li>|</li>
-            <li>공정위확인</li>
-            <li>|</li>
-            <li>쇼핑몰 고객센터</li>
-            <li>|</li>
-            <li>000-111-2222</li>
         </ul>
     </footer>
 </body>
