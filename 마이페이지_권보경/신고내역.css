@@ -3,12 +3,17 @@
     margin: 0;
     /* border: 1px solid red; */
     /* font-family: 'Gamja Flower', cursive; */
-    /* background-color: #F7EEE3; */
+    /* background-color: #f; */
 }
 
 a{
     color: #000;
     text-decoration: none;
+}
+
+body{
+    /* background-color: #fcf8f4; */
+    color: #594440;
 }
 header{
     height: 100px;

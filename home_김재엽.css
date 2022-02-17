@@ -7,18 +7,22 @@
     font-family: 'Jua', sans-serif;
     /* font-family: 'Sunflower', sans-serif; */
     /* font-family: 'Nanum Brush Script', cursive; */
+    /* background-color: #fcf8f4; */
 }
 
 a{
     color: #000;
 }
+body{
+    background-color: #fcf8f4;
+}
 
 header{
     height: 100px;
     width: 80%;
-    margin: 15px auto;
+    margin: 40px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -27,40 +31,41 @@ header{
 .menu{
   list-style: none;
   display: flex;
+  color: #594440;
 }
 
 .menu>li{
     margin:8px 12px;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 /* 우측 상단 아이콘 */
 .icon li{
     margin:8px 12px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 /* 검색창 */
 .search{
-    height: 40px;
+    height:70px;
     width: 25%;
     margin: 0 auto;
     display: flex;
 }
 
 .search.textbox{
-    height: 30px;
+    height: 40px;
     width: 80%;
-    text-align:start;
+    text-align: start;
     font-size: 25px;
 }
 
 .search.button{
-    height: 35px;
+    height: 45px;
     width: 50px;
-    padding-left: 10px;
-    line-height: 35px;
-    font-size: 16px;
+    padding-left: 7px;
+    line-height: 45px;
+    font-size: 20px;
 }
 
 /* 홈 메인 사진 */

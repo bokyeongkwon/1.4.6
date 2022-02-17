@@ -1,18 +1,21 @@
 *{  
     padding: 0;
     margin: 0;
-    /* border: 1px solid red; */
-    /* font-family: 'Gamja Flower', cursive; */
-    /* background-color: #F7EEE3; */
+    font-family: 'Jua', sans-serif;
 }
 
 a{
     color: #000;
 }
+
+body{
+    background-color: #fcf8f4;
+    color: #594440;
+}
 header{
     height: 100px;
     width: 80%;
-    margin: 15px auto;
+    margin: 40px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,13 +30,13 @@ header{
 
 .menu>li{
     margin:8px 12px;
-    font-size: 25px;
+    font-size: 28px;
 }
 
 /* 우측 상단 아이콘 */
 .icon li{
     margin:8px 12px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
 /* 검색창 */
@@ -63,22 +66,25 @@ header{
 main{
     width: 70%;
     margin: 50px auto;   
+    /* background-color: #fcf8f4; */
+
 }
 
 /* 회원가입 텍스트 */
 .member_join{
-    padding: 20px 0;
+    padding: 30px 0;
     letter-spacing: 10px;
-    font-size: xx-large;
-    
+    font-size: 40px;
+    color: #F37335;
 }
 
 /* 필수 입력사항 텍스트 */
 .essential{
-    height: 30px;
+    height: 40px;
     margin-bottom: 20px;
     padding-left: 10px;
-    line-height: 30px;
+    font-size: 25px;
+    line-height:40px;
     background-color: #e5d0b5;
 }
 
@@ -88,19 +94,43 @@ main{
 }
 
 .item{
-    height: 30px;
+    height: 50px;
     width: 15%;
     padding: 10px 10px;
     border: none;
     border-bottom: 1px solid #dedede;
-    line-height: 30px;
+    font-size: 25px;
+    line-height: 50px;
     background-color: #f0f0f0;
 }
 
 .item2{
-    height: 30px;
+    height: 40px;
     padding: 10px 10px;
+    font-size: 20px;
 }
+
+input[type=text]{
+    width: 200px;
+    height: 30px;
+}
+
+input[type=radio]{
+    width: 15px;
+    height: 15px;
+}
+
+label{
+    margin: 0 10px;
+    font-size: 23px;
+}
+
+button, select{
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+}
+
 
 /* 필수 입력사항 전체 */
 .member_e{
@@ -110,14 +140,15 @@ main{
 
 /* 선택 입력사항 텍스트 */
 .unessential{
-    height: 30px;
+    height: 40px;
     margin: 20px 0;
     padding-left: 10px;
-    line-height: 30px;
+    font-size: 25px;
+    line-height: 40px;
     background-color: #e5d0b5;
 }
 
-/* 선택 입력사항 전체 */
+/* 선택 입력사항 내용 전체 */
 .member_ue{
     border: none;
     border-bottom: 1px solid #dedede;
@@ -131,12 +162,14 @@ main{
 }
 
 .cafe{
-    height: 50px;
-    width: 100px;
+    height: 80px;
+    width: 150px;
     border: none;
-    color: #f0f0f0;
-    font-size: 20px;
-    background-color: #a7cebc;
+    font-size: 30px;
+    color: #594440;
+    letter-spacing: 3px;
+    line-height: 80px;
+    background-color: #e5d0b5;
 }
 
 /* 하단 */
