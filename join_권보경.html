@@ -96,7 +96,9 @@
             <div class="content m_email">
                 <div class="item email">이메일</div>
                 <div class="item2">
-                    <input type="text" name="m_e_email" class="m_e_email">
+                    <input type="text" name="m_e_email1" class="m_e_email">
+                    <span class="at">@</span>
+                    <input type="text" name="m_e_email2" class="m_e_email">
                     <button class="email_chk">중복확인</button>
                 </div>
             </div>
@@ -126,10 +128,6 @@
                     <input type="radio" name="m_e_sex" id="female" checked="checked">
                 </div>
             </div>
-            <div class="content m_address">
-                <div class="item saddress">주소</div>
-                <div class="item2"><button class="m_e_address">주소찾기</button></div>
-            </div>
         </div>
 
         <!-- 선택 입력사항 텍스트 -->
@@ -144,6 +142,15 @@
             <div class="content ue_blog">
                 <div class="item blog">홈페이지</div>
                 <div class="item2"><input type="text" name="m_ue_blog" class="m_ue_blog"></div>
+            </div>
+            <div class="content ue_likelist">
+                <div class="item likelist">관심리스트 공개 여부</div>
+                <div class="item2">
+                    <label for="m_ue_likelist_public">공개</label>
+                    <input type="radio" name="m_ue_likelist" id="m_ue_likelist_public" checked="checked">
+                    <label for="m_ue_likelist_private">비공개</label>
+                    <input type="radio" name="m_ue_likelist" id="m_ue_likelist_private">
+                </div>
             </div>
         </div>
 

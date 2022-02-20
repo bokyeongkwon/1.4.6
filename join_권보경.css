@@ -108,6 +108,7 @@ main{
     height: 40px;
     padding: 10px 10px;
     font-size: 20px;
+    line-height: 40px;
 }
 
 input[type=text]{
@@ -152,6 +153,11 @@ button, select{
 .member_ue{
     border: none;
     border-bottom: 1px solid #dedede;
+}
+/* 체크박스 크기 늘리기 */
+.m_ue_likelist{
+    transform : scale(1.5);
+    
 }
 
 /* 가입버튼 */
