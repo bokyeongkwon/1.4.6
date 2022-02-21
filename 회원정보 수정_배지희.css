@@ -1,18 +1,20 @@
 *{  
     padding: 0;
     margin: 0;
-    /* border: 1px solid red; */
-    /* font-family: 'Gamja Flower', cursive; */
-    /* background-color: #F7EEE3; */
+    font-family: 'Jua', sans-serif;
 }
 
 a{
     color: #000;
 }
+body{
+    background-color: #fcf8f4;
+    color: #594440;
+}
 header{
     height: 100px;
     width: 80%;
-    margin: 15px auto;
+    margin: 40px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,13 +123,15 @@ main{
 }
 
 .setting_member{
-    height: 50px;
-    width: 100px;
-    border: none;
-    color: #f0f0f0;
-    font-size: 20px;
-    background-color: #a7cebc;
     margin: 0 50px;
+    height: 80px;
+    width: 150px;
+    border: none;
+    font-size: 30px;
+    color: #594440;
+    letter-spacing: 3px;
+    line-height: 80px;
+    background-color: #e5d0b5;
 }
 
 /* 하단 */
