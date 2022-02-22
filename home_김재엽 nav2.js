@@ -5,8 +5,8 @@ $(function(){
           header = $("header");
 
     depth1.mouseenter(function(){
-        header.stop().animate({height:"300px"});
+        header.stop().animate({height:"500px"});
     }).mouseleave(function(){
-        header.stop().animate({height:"50px"});
+        header.stop().animate({height:"100px"});
     })
 }); //ready
