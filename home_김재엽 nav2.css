@@ -6,12 +6,9 @@
     /* font-family: 'Gamja Flower', cursive; */
     /* background-color: #fff8ee; */
     font-family: 'Jua', sans-serif;
-    /* font-family: 'Sunflower', sans-serif; */
-    /* font-family: 'Nanum Brush Script', cursive; */
 }
 body{
- background-color: #fff8ee;
-
+ background-color: #fcf8f4;
 }
 
 a{
@@ -23,48 +20,65 @@ a{
 header{
     position:absolute;
     left: 0;right: 0;top: 0;
-    height: 50px;
+    height: 100px;
     overflow: hidden;
-    background:linear-gradient(white 50px, rgba(255,255,255,0.5) 50px, rgba(255,255,255,0.5));  
+    background:linear-gradient(#fcf8f4 100px, rgba(255,255,255,0.7) 100px, rgba(255,255,255,0.7));  
+    
     /* display: flex; */
-
+    /* justify-content: center; */
     /* width: 80%;
-    margin: 15px auto;
-    display: flex;
+    margin: 0 auto; */
     justify-content: space-between;
-    align-items: center; */
+    /* align-items: center; */
 }
 
 header:after{content: "";
-                position: absolute; top:0px; left: 0;
+                position: absolute; top: 0; left: 0;
                 background:#666;
                 width: 100%;
                 height: 2px;}
 
-.inner{width: 1200px;
-        margin: 0 auto;}
+.inner{
+    /* width: 1200px; */
+    height: 100px;
+    line-height: 100px;
+        /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-between;
 
-.logo{
+}
+
+.menuBox1 > .menu > li , .icon > ul > li{
+    line-height: 100px;
+}
+
+.menuBox1 > .menu > li > ul > li:hover a{
+    background-color: black;
+    color: blanchedalmond;
+}
+
+
+
+/* .logo{
     float: left;    
 }
 
 .icon{
     float: right;
-}
+} */
 
-.menuBox1{
+/* .menuBox1{
     position: absolute;left: 50%;top: 0;transform: translate(-50%);
-}
+} */
 
 .menu > li, .icon  li{
     float: left;
     line-height: 50px;
-    /* padding: 0 20px; */
 }
 .icon  li{
-    padding: 0 20px;
+    padding: 0 10px;
 }
-.menu > li a, .icon > li a{padding: 0 20px; color: #666;}
+.menu > li a, .icon > li a{padding: 0 20px; color: black;}
 .menu > li a span {position: relative;}
 .menu > li > a span:after{
     
@@ -91,12 +105,6 @@ nav > ul > li ul{width: 100%;}
     background-color: black;
     color: white;
 } */
-
-.menuBox1 > ul ul{
-    /* display: none; */
-    /* position: absolute; */
-    text-align: center;
-}
   
 /* .menuBox1 > ul > li:hover > ul{
     display: block;
@@ -148,26 +156,31 @@ nav > ul > li ul{width: 100%;}
 
 /* 홈 메인 사진 */
 article{
-    width: 60%;
-    margin: 100px auto;
+    width: 100%;
+    height: 800px;
+    background-image: url(https://cdn.pixabay.com/photo/2013/11/05/22/13/cake-206104__480.jpg);
 }
 
 
-.recommend{
+/* .recommend{
     height: 500px; 
     margin: 0 auto;
     font-size: 35px;
     background-color: #ffc8b4;
-}
+} */
 
 /* 공지사항 */
 section{
     height: 150px;
-    width: 60%;
+    width: 55%;
     margin: 100px auto;
     display: flex;
+    /* justify-content: space-between; */
     justify-content: space-between;
+
 }
+
+
 
 .announceIcon{
     font-size: 80px;
@@ -177,12 +190,14 @@ section{
     font-size: 25px;
 }
 
+
+
 /* 랭킹 게시글 */
 .post{
     width: 80%;
     margin: 50px auto;
     display:flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 20px;
 }
 
@@ -216,24 +231,33 @@ section{
     height: 75px;
     width: 75px;
     margin-left: 5px;
-    background-color: #bb871e;
+    /* background-color: #bb871e; */
+    background-image: url(https://cdn.pixabay.com/photo/2013/11/05/22/13/cake-206104__480.jpg);
 }
 
 .rightText{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
 
+.rightText > .title {
+        text-align: center;
+}
+
+.rightText .nickName{
+    float: left;
 }
 
 /* 하단 */
 footer{
-    border-top: 1px solid darkgreen;
+    border-top: 1px solid black;
 }
 
 footer>ul{
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between
 }
