@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="신고내역.css">
+    <link rel="stylesheet" href="관리자 신고내역_권보경.css">
     <title>Document</title>
 </head>
 <body>
@@ -51,12 +51,11 @@
     <main>
         <!-- 왼쪽 카테고리 -->
         <div id="leftCategory">
-            <div id="leftCategory_title">마이 페이지</div>
+            <div id="leftCategory_title">관리자 페이지</div>
             <ul class="leftCategory_ul">
-                <li class="leftCategory_li"><a href="#" id="subscribeList">구독 / 알림</a></li>
-                <li class="leftCategory_li"><a href="#" id="likeList">관심리스트</a></li>
-                <li class="leftCategory_li"><a href="#" id="reportList">신고 내역</a></li>
-                <li class="leftCategory_li"><a href="#" id="postingList">게시물 / 댓글</a></li>
+                <li class="leftCategory_li"><a href="#" id="boardReportList">게시물 신고</a></li>
+                <li class="leftCategory_li"><a href="#" id="replyReportList">댓글 신고</a></li>
+                <li class="leftCategory_li"><a href="#" id="boardList">게시물</a></li>
             </ul>
         </div>
         <!-- 본문 -->
@@ -64,7 +63,6 @@
             <div class="rpLiMenu">
                 <ul>
                     <li class="poRpList"><a href="#" role="tab">게시물 신고</a></li>
-                    <li class="coRpList"><a href="#" role="tab">댓글 신고</a></li>
                 </ul>
                 <p><input type="date" min="2022-01-01" max="2032-01-01" id=""></p>
                 <p>~</p>
@@ -74,11 +72,11 @@
             <div class="rpLiMain_top">
                 <div class="rpNum">번호</div>
                 <span>|</span>
-                <div class="rpDate">등록일</div>
+                <div class="rpDate">신고일</div>
                 <span>|</span>
                 <div class="rpTitle">게시물 제목</div>
                 <span>|</span>
-                <div class="rpResult">결과</div>
+                <div class="rpResult">진행 사항</div>
             </div>
             <div class="rpLiMain_med">
                 <div class="item item1">

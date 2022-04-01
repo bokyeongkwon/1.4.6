@@ -4,6 +4,8 @@
     /* border: 1px solid red; */
     /* font-family: 'Gamja Flower', cursive; */
     /* background-color: #F7EEE3; */
+    background-color: #fcf8f4;
+    font-family: 'Jua', sans-serif;
 }
 
 a{
@@ -102,84 +104,108 @@ main {
     line-height: 20px;
 }
 
-#subscribeList{
+#likeList{
     padding: 10px;
     border: 1px solid red;
     border-radius: 5px;
 }
 
 /* 본문 전체 */
-.scbLiWrap{
-    height: 773px;
-    width: 80%;
-    margin-left: 150px;
-    border-bottom: 2px solid gray;
+.liLiWrap {
+    width: 70%;
+    margin-left: 100px;
 }
 
-/* scbLiMenu 부분 */
-.scbLiWrap .scbLiMenu{
+/* 관심리스트 글씨 */
+.liLiWrap .liLiMenu{
     margin: 10px 10px;
     padding-left: 20px;
     border-left: 4px solid #F37335;
     font-size: 35px;
 }
 
-/* scbLiMain_top 부분 */
-.scbLiWrap .scbLiMain_top {
-    height: 70px;
-    width: 100%;
-    margin-top: 80px;
+/* 게시물 부문 */
+.liLiWrap .liLiItems{
+    margin-top: 30px;
+    box-sizing: border-box;
     display: flex;
-    border-bottom: 2px solid gray;
-    font-size: 20px;
-    text-align: center;
-    line-height: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-/* scbLiMain_med 부분 */
-.scbLiWrap .scbLiMain_med{
+.item {
+    height: 370px;
+    width: 300px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 50px;
     display: flex;
     flex-direction: column;
+    background-color: white;
 }
 
-.scbLiWrap .scbLiMain_med .item{
-    height: 70px;
+.post {
+    height: 100%;
     width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.img {
+    height: 65%;
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    text-align: center;
+}
+
+.snowman{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.caption {
+    height: 10%;
     margin-top: 10px;
+    padding: 5px;
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    font-size: 17px
+}
+
+.postTitle {
+    font-weight: bold;
+}
+
+.bookmark {
+    margin-right: 10px;
     text-align: center;
-    line-height: 70PX;
+    color: red;
 }
 
-.scbLiWrap .scbLiMain_med .item .fas{
-    color: #FDC830;
+.info {
+    display: flex;
+    justify-content: space-evenly;
+    color: gray;
+    font-size: 8pt;
 }
 
-.scbLiWrap .scbLiMain_med .item .fa-bell{
-    font-size: 25px;
+.memId {
+    width: 200px;
 }
 
-/* scbLiMain_top,scbLiMain_med 공통 부분 */
-.scbLiWrap .scbNum{
-    width: 10%;
-}
-
-.scbLiWrap .scbNick{
-    width: 25%;
-}
-
-.scbLiWrap .scbNew{
-    width: 50%;
-}
-
-.scbLiWrap .scbAlarm{
-    width: 15%;
+.uploadTime {
+    width: 70px;
+  
+    text-align: center;
 }
 
 /* pageNav 부분 */
-.scbLiWrap .pageNav{
+.liLiWrap .pageNav{
     height: 50px;
     width: 100%;
     margin: 50px 0;
@@ -190,7 +216,7 @@ main {
     font-size: 25px;
 }
 
-.scbLiWrap .pageNav .pageNum{
+.liLiWrap .pageNav .pageNum{
     margin: 30px;
     padding: 0 15px;
     list-style: none;

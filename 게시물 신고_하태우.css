@@ -1,0 +1,218 @@
+*{  
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+    /* font-family: 'Gamja Flower', cursive; */
+    /* background-color: #f; */
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+body{
+    /* background-color: #fcf8f4; */
+    color: #594440;
+}
+header{
+    height: 100px;
+    width: 80%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 상단 메뉴 */
+.icon_ul,
+.menu{
+  list-style: none;
+  display: flex;
+}
+
+.menu>li{
+    margin:8px 12px;
+    font-size: 25px;
+}
+
+/* 우측 상단 아이콘 */
+.icon li{
+    margin:8px 12px;
+    font-size: 30px;
+}
+
+/* 검색창 */
+.search{
+    height: 40px;
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.search.textbox{
+    height: 30px;
+    width: 80%;
+    text-align:start;
+    font-size: 25px;
+}
+
+.search.button{
+    height: 35px;
+    width: 50px;
+    padding-left: 10px;
+    line-height: 35px;
+    font-size: 16px;
+}
+
+/* main */
+main {
+    height: 1400px;
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+}
+
+/* 왼쪽 카테고리 */
+#leftCategory {
+    height: 400px;
+    width: 13%;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+}
+
+#leftCategory_title {
+    height: 10%;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-size: 18pt;
+    font-weight: bold;
+    line-height: 40px;
+    background-color: #FBD786;
+}
+
+.leftCategory_ul {
+    height: 90%;
+    width: 100%;
+    list-style: none;
+}
+
+.leftCategory_li {
+    height: 50px;
+    margin: 30px 0;
+    border-bottom: solid 1px black;
+    font-size: 18pt;
+    line-height: 20px;
+}
+
+#reportList{
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    /* background-color: #a7cebc; */
+}
+
+/* 본문 전체 */
+.rpLiWrap{
+    height: 800px;
+    width: 80%;
+    margin-left: 150px;
+    border-bottom: 1px solid black;
+}
+
+/* rpLiMenu 부분 */
+.rpLiWrap .rpLiMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid red;
+}
+
+.rpLiWrap .rpLiMenu ul {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 1px solid #ddd;
+    font-size: 0;
+}
+
+.rpLiWrap .rpLiMenu li{
+    width: 25%;
+    display: inline-block;
+    border: 1px solid #ddd;
+    /* border-bottom: 1px solid #ef3e42; */
+    border-left: none;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+}
+
+.rpLiWrap .rpLiMenu li a {
+    display: block;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #707070;
+}
+
+.rpLiWrap .rpLiMenu li.poRpList{
+    border: 1px solid #ef3e42;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    color: #ef3e42;
+}
+
+.rpLiWrap .rpLiMenu p{
+    margin: 0 10px;
+}
+
+.rpLiWrap .rpLiMenu .rpFind{
+    height: 25px;
+    width: 70px;
+}
+
+.rpLiWrap .rpLiMain table{
+    width: 100%;
+    
+}
+
+table thead
+
+/* pageNav 부분 */
+.rpLiWrap .pageNav{
+    height: 50px;
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.rpLiWrap .pageNav .pageNum{
+    margin: 30px;
+    padding: 0 15px;
+    list-style: none;
+    border: 1px solid black;
+}
+
+/* 하단 */
+footer{
+    border-top: 1px solid darkgreen;
+}
+
+footer>ul{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}

@@ -16,7 +16,7 @@
 <body>
     <header>
         <!-- 로고 -->
-        <div class="logo"><img src="logo.jpg" alt="" width="180px" height="150px"></div>
+        <div class="logo"><img src="/logo.jpg" alt="" width="180px" height="150px"></div>
         <!-- 상단 메뉴 -->
         <nav>
             <ul class="menu">
@@ -58,9 +58,9 @@
             <b>회원가입</b>
         </div>
 
-        <!-- 필수 입력사항 텍스트-->
-        <p class="essential">필수입력사항</p>
-        <!-- 필수 입력사항 내용 -->
+        <!-- 입력사항 텍스트-->
+        <p class="essential">입력사항</p>
+        <!-- 입력사항 내용 -->
         <div class="member_e">
             <div class="content m_name">
                 <div class="item name">이름</div>
@@ -76,12 +76,21 @@
             </div>
             <div class="content m_pwd">
                 <div class="item pwd">비밀번호</div>
-                <div class="item2"><input type="text" name="m_e_pwd" class="m_e_pwd"></div>
-                <span>최소 하나의 문자, 하나의 숫자 및 하나의 특수 문자 포함 8~20자 입력 가능</span>
+                <div class="item2">
+                    <input type="text" name="m_e_pwd" class="m_e_pwd">
+                    <span>최소 하나의 문자, 하나의 숫자 및 하나의 특수 문자 포함 8~20자 입력 가능</span>
+                </div>
             </div>
             <div class="content m_pwd_chk">
                 <div class="item pwd_chk">비밀번호 확인</div>
                 <div class="item2"><input type="text" name="m_e_pwd_chk" class="m_e_pwd_chk"></div>
+            </div>
+            <div class="content m_nickname">
+                <div class="item nickname">닉네임</div>
+                <div class="item2">
+                    <input type="text" name="m_ue_nickname" class="m_ue_nickname">
+                    <button class="nickname_chk">중복확인</button>
+                </div>    
             </div>
             <div class="content m_phone">
                 <div class="item phone">연락처</div>
@@ -117,28 +126,13 @@
                     <input type="radio" name="m_e_sex" id="female" checked="checked">
                 </div>
             </div>
-        </div>
-
-        <!-- 선택 입력사항 텍스트 -->
-        <p class="unessential">선택입력사항</p>
-        <!-- 선택 입력사항 내용 -->
-        <div class="member_ue">
-            <div class="content ue_nickname">
-                <div class="item nickname">닉네임</div>
-                <div class="item2"><input type="text" name="m_ue_nickname" class="m_ue_nickname"></div>
-                <button class="email_chk">중복확인</button>
-            </div>
-            <div class="content ue_blog">
-                <div class="item blog">홈페이지</div>
-                <div class="item2"><input type="text" name="m_ue_blog" class="m_ue_blog"></div>
-            </div>
-            <div class="content ue_likelist">
-                <div class="item likelist">관심리스트 공개 여부</div>
+            <div class="content m_likelist">
+                <div class="item likelist">관심리스트</div>
                 <div class="item2">
-                    <label for="m_ue_likelist_public">공개</label>
-                    <input type="radio" name="m_ue_likelist" id="m_ue_likelist_public" checked="checked">
-                    <label for="m_ue_likelist_private">비공개</label>
-                    <input type="radio" name="m_ue_likelist" id="m_ue_likelist_private">
+                    <label for="m_likelist_public">공개</label>
+                    <input type="radio" name="m_likelist" id="m_likelist_public" checked="checked">
+                    <label for="m_likelist_private">비공개</label>
+                    <input type="radio" name="m_likelist" id="m_likelist_private">
                 </div>
             </div>
         </div>
