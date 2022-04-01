@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내가쓴 게시물, 댓글 조회</title>
+    <script src="https://kit.fontawesome.com/d4b88f7572.js" crossorigin="anonymous"></script>
+    <title>구독 / 알림</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="contentReply.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="구독_알림.css">
 </head>
 <body>
     
@@ -63,87 +64,65 @@
     <!--메인-->
     <div class="main">
             <div class="bbs-wrap">
-                <div class="rpLiMenu">
-                    <ul>
-                        <li class="poRpList"><a href="#" role="tab">게시물</a></li>
-                        <li class="coRpList"><a href="#" role="tab">댓글</a></li>
-                    </ul>
-                    <p><input type="date" min="2022-01-01" max="2032-01-01" id=""></p>
-                    <p>~</p>
-                    <p><input type="date" min="2022-01-01" max="2032-01-01" id=""></p>
-                    <button class="rpFind">찾기</button>
-                </div>
+                <div class="scbLiMenu">구독 / 알림</div>
                 <div class="bbs-body">
                     <div class="bbs-content">
-                        <table>
+                        <table style="table-layout: fixed;">
                             <!--테이블 시작-->
                             <!-- thead -->
                             <thead>
                                 <tr>
-                                    <th scope="col" width="5%">선택</th>   <!--체크박스-->
+                                    <th scope="col" width="8%">번호</th>   <!--체크박스-->
                                     <th scope="col" width="2.5%">ㅣ</th>
-                                    <th scope="col" width="10%">번호</th>   <!--번호-->
+                                    <th scope="col" width="15%">닉네임</th>   <!--번호-->
                                     <th scope="col" width="2.5%">ㅣ</th>
-                                    <th scope="col" width="50%" >제목</th>
+                                    <th scope="col" width="50%" >최근 게시물</th>
                                     <th scope="col" width="2.5%">ㅣ</th>
-                                    <th scope="col" width="15%">작성일</th>
+                                    <th scope="col" width="10%">알림 설정</th>
                                     <th scope="col" width="2.5%">ㅣ</th>
-                                    <th scope="col" width="10%">조회수</th>
+                                    <th scope="col" width="7%">구독</th>
                                 </tr>
                             </thead>
                             <!--게시물 내용-->
                             <!-- tbody -->
                             <tbody>
                                 <tr>
-                                    <td scope="row" width="5%"><input type="checkbox"></td>   <!--체크박스-->
-                                    <td  width="2.5%"></td>
-                                    <td  width="10%">486</td>   <!--번호-->
-                                    <td  width="2.5%"></td>
-                                    <td  width="50%" class="tdTitle">메롱바보멍청이</td>
-                                    <td  width="2.5%"></td>
-                                    <td  width="15%">2022-03-31</td>
-                                    <td  width="2.5%"></td>
-                                    <td  width="10%">10000</td>
+                                    <td width="5%">486</td>   <!--번호-->
+                                    <td width="2.5%"></td>
+                                    <td width="15%" class="tdNickname">알로하</td>   
+                                    <td width="2.5%"></td>
+                                    <td width="50%" class="tdTitle">휘낭시에 만들기</td>
+                                    <td width="2.5%"></td>
+                                    <td width="10%"><i class="far fa-bell"></i></td>
+                                    <td width="2.5%"></td>
+                                    <td width="10%"><button class="scbDelete" type="button" >구독 취소</button></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" width="5%"><input type="checkbox"></td>   <!--체크박스-->
-                                    <td  width="2.5%"></td>
-                                    <td  width="10%">486</td>   <!--번호-->
-                                    <td  width="2.5%"></td>
-                                    <td  width="50%" class="tdTitle">메롱바보멍청이</td>
-                                    <td  width="2.5%"></td>
-                                    <td  width="15%">2022-03-31</td>
-                                    <td  width="2.5%"></td>
-                                    <td  width="10%">10000</td>
+                                    <td width="10%">486</td>   <!--번호-->
+                                    <td width="2.5%"></td>
+                                    <td width="15%" class="tdNickname">알로하</td>   
+                                    <td width="2.5%"></td>
+                                    <td width="50%" class="tdTitle">휘낭시에 만들기222222222</td>
+                                    <td width="2.5%"></td>
+                                    <td width="5%"><i class="far fa-bell"></i></td>
+                                    <td width="2.5%"></td>
+                                    <td width="10%"> <button class="scbDelete" type="button" >구독 취소</button></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" width="5%"><input type="checkbox"></td>   <!--체크박스-->
-                                    <td  width="2.5%"></td>
-                                    <td  width="10%">486</td>   <!--번호-->
-                                    <td  width="2.5%"></td>
-                                    <td  width="50%" class="tdTitle">메롱바보멍청이</td>
-                                    <td  width="2.5%"></td>
-                                    <td  width="15%">2022-03-31</td>
-                                    <td  width="2.5%"></td>
-                                    <td  width="10%">10000</td>
+                                    <td width="10%">486</td>   <!--번호-->
+                                    <td width="2.5%"></td>
+                                    <td width="15%" class="tdNickname">알로하</td>   
+                                    <td width="2.5%"></td>
+                                    <td width="50%" class="tdTitle">휘낭시에 만들기33333333</td>
+                                    <td width="2.5%"></td>
+                                    <td width="5%"><i class="far fa-bell"></i></td>
+                                    <td width="2.5%"></td>
+                                    <td width="10%"> <button class="scbDelete" type="button" >구독 취소</button></td>
                                 </tr>
-                                
                             </tbody>                    
                         </table>
-                        <!--테이블 끝-->
-                        <!--전체선택 삭제,글쓰기-->
-                        <div class="main_down" >
-                            <div class="left_main">
-                                <input type="checkbox" id="all_check">
-                                <label for="all_check">전체선택</label>
-                            </div>
-                            <!--삭제-->
-                            <div class="right_main">
-                                <button type="button">삭제</button>
-                            </div>
-                        </div>
-                    </div><!--bbs-content-->
-                </div><!--bbs-body-->
+                    </div>
+                </div>
             </div>
         </div>
     <!--오른쪽 여백-->

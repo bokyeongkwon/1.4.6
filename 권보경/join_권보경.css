@@ -78,7 +78,7 @@ main{
     color: #F37335;
 }
 
-/* 필수 입력사항 텍스트 */
+/* 입력사항 텍스트 */
 .essential{
     height: 40px;
     margin-bottom: 20px;
@@ -88,7 +88,12 @@ main{
     background-color: #e5d0b5;
 }
 
-/* 필수,선택 입력사항 공통 */
+/* 입력사항 공통 */
+.member_e{
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
 .content{
     display: flex;
 }
@@ -133,27 +138,6 @@ button, select{
 }
 
 
-/* 필수 입력사항 전체 */
-.member_e{
-    border: none;
-    border-bottom: 1px solid #dedede;
-}
-
-/* 선택 입력사항 텍스트 */
-.unessential{
-    height: 40px;
-    margin: 20px 0;
-    padding-left: 10px;
-    font-size: 25px;
-    line-height: 40px;
-    background-color: #e5d0b5;
-}
-
-/* 선택 입력사항 내용 전체 */
-.member_ue{
-    border: none;
-    border-bottom: 1px solid #dedede;
-}
 
 /* 가입버튼 */
 .join_cafe{

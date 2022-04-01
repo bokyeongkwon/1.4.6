@@ -3,12 +3,17 @@
     margin: 0;
     /* border: 1px solid red; */
     /* font-family: 'Gamja Flower', cursive; */
-    /* background-color: #F7EEE3; */
+    /* background-color: #f; */
 }
 
 a{
     color: #000;
     text-decoration: none;
+}
+
+body{
+    /* background-color: #fcf8f4; */
+    color: #594440;
 }
 header{
     height: 100px;
@@ -102,108 +107,125 @@ main {
     line-height: 20px;
 }
 
-#likeList{
+#reportList{
     padding: 10px;
     border: 1px solid red;
     border-radius: 5px;
+    /* background-color: #a7cebc; */
 }
 
 /* 본문 전체 */
-.liLiWrap {
-    width: 70%;
-    margin-left: 100px;
+.rpLiWrap{
+    height: 800px;
+    width: 80%;
+    margin-left: 150px;
+    border-bottom: 1px solid black;
 }
 
-/* 관심리스트 글씨 */
-.liLiWrap .liLiMenu{
-    margin: 10px 10px;
-    padding-left: 20px;
-    border-left: 4px solid #F37335;
-    font-size: 35px;
-}
-
-/* 게시물 부문 */
-.liLiWrap .liLiItems{
-    margin-top: 30px;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.item {
-    height: 370px;
-    width: 300px;
-    margin-top: 50px;
-    box-sizing: border-box;
-    border: 1px solid gray;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-}
-
-.post {
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    box-sizing: border-box;
-}
-
-.img {
-    height: 65%;
-    width: 100%;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    text-align: center;
-}
-
-.snowman{
-    height: 100%;
-    width: 100%;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-}
-
-.caption {
-    height: 10%;
-    margin-top: 10px;
-    padding: 5px;
+/* rpLiMenu 부분 */
+.rpLiWrap .rpLiMenu{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    font-size: 17px
+    align-items: center;
+    border-bottom: 1px solid red;
 }
 
-.postTitle {
-    font-weight: bold;
+.rpLiWrap .rpLiMenu ul {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 1px solid #ddd;
+    font-size: 0;
 }
 
-.bookmark {
-    margin-right: 10px;
+.rpLiWrap .rpLiMenu li{
+    width: 25%;
+    display: inline-block;
+    border: 1px solid #ddd;
+    /* border-bottom: 1px solid #ef3e42; */
+    border-left: none;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    position: relative;
+    font-size: 20px;
     text-align: center;
-    color: red;
 }
 
-.info {
-    display: flex;
-    justify-content: space-evenly;
-    color: gray;
-    font-size: 8pt;
+.rpLiWrap .rpLiMenu li a {
+    display: block;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #707070;
 }
 
-.memId {
-    width: 200px;
+.rpLiWrap .rpLiMenu li.poRpList{
+    border: 1px solid #ef3e42;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    color: #ef3e42;
 }
 
-.uploadTime {
+.rpLiWrap .rpLiMenu p{
+    margin: 0 10px;
+}
+
+.rpLiWrap .rpLiMenu .rpFind{
+    height: 25px;
     width: 70px;
-  
+}
+
+/* rpLiMain_top 부분 */
+.rpLiWrap .rpLiMain_top {
+    height: 70px;
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    border-bottom: 1px solid gray;
     text-align: center;
+    line-height: 50px;
+}
+
+/* rpLiMain_med 부분 */
+.rpLiWrap .rpLiMain_med{
+    display: flex;
+    flex-direction: column;
+}
+
+.rpLiWrap .rpLiMain_med .item{
+    height: 70px;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid gray;
+    text-align: center;
+    line-height: 70PX;
+}
+
+/* rpLiMain_top,rpLiMain_med 공통 부분 */
+.rpLiWrap .rpNum{
+    width: 10%;
+}
+
+.rpLiWrap .rpDate{
+    width: 20%;
+}
+
+.rpLiWrap .rpTitle{
+    width: 50%;
+}
+
+.rpLiWrap .rpResult{
+    width: 20%;
 }
 
 /* pageNav 부분 */
-.liLiWrap .pageNav{
+.rpLiWrap .pageNav{
     height: 50px;
     width: 100%;
     margin: 50px 0;
@@ -214,7 +236,7 @@ main {
     font-size: 25px;
 }
 
-.liLiWrap .pageNav .pageNum{
+.rpLiWrap .pageNav .pageNum{
     margin: 30px;
     padding: 0 15px;
     list-style: none;
