@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* 리뷰 신고 css 시작 */
+.report-wrap {
+  /* display: none; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 302px;
+  left: 771px;
+  height: 336px;
+  z-index: 2202;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  background-image: linear-gradient(#fff, #fff);
+}
+.report-header-wrap {
+  width: 400px;
+  padding: 15px 0;
+  border-bottom: 1px solid #bbb;
+  text-align: center;
+}
+.report-header-wrap > span {
+  font-size: 25px;
+}
+.report-body-wrap {
+  margin: 15px 0;
+}
+.report-body-wrap p {
+  margin: 20px;
+}
+.report-body-wrap p > label {
+  outline: none;
+}
+.report-body-wrap input {
+  margin-right: 10px;
+}
+.btn-y,
+.btn-n {
+  margin: 0 25px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to bottom, #8cc841, #29aeec 50%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  padding: 10px;
+  box-shadow: 0 15px 10px -7px #eee;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+/* 리뷰 신고 css 끝 */

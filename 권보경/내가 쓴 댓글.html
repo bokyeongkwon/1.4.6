@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="fragment/head">
+
+<head th:replace="fragment/head.html::fragment-head"></head>
+<th:block layout:fragment="page_css">
+  <link rel="stylesheet" href="내가 쓴 댓글.css" th:href="@{/css/board/boardDetail.css}">
+</th:block><th:block layout:fragment="page_js">
+    <script src="https://kit.fontawesome.com/d4b88f7572.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <script defer src="댓글_수정,삭제.js" th:src="@{/js/board/boardDetail.js}"></script>
+  <script defer th:src="@{/js/board/category.js}"></script>
+</th:block>
+<body>
+
+    <header th:fragment="fragment-global">
+        <div class="inner">
+          <!-- 로고 -->
+          <a href="" th:href="@{/}" class="logo"><img src="/logo.jpg" th:src="@{/img/logo.jpg}" alt="" width="150px" height="100px"></a>
+          <!-- 상단 메뉴 -->
+          <nav class="category" >
+            <ul class="menu">
+              <li>
+                <a href="#"><span>분야별 레시피</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=11}"><span>제과</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=12}"><span>제빵</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=13}"><span>음료</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=14}"><span>노오븐 베이킹</span></a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>테마별 레시피</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=21}"><span>발렌타인 데이</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=22}"><span>할로윈</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=23}"><span>빼빼로 데이</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=24}"><span>크리스마스</span></a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>사진 팁</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=31}">구도/각도</a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=32}">보정</a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>베이킹 클래스 찾기</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=41}">베이킹 클래스 찾기</a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>커뮤니티</span></a>
+                <ul>
+                  <li><a href="#"  th:href="@{/board/1?cateNum=51}">Q&A</a></li>
+                  <li><a href="#"  th:href="@{/board/1?cateNum=52}">자유 게시판</a></li>
+                </ul>
+              </li>
+            </ul>
+      
+          </nav>
+          <!-- 우측상단 아이콘 -->
+          <div class="icon">
+            <ul class="icon_ul">
+              <li><a href="#" class="searchBtn"><i class="fas fa-search"></i></a></li>
+              <li><a href="#" class="memberBtn"><i class="far fa-user"></i></a></li>
+              <li><a href="#" class="alarmBtn"><i class="fa fa-bell"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+<!--아이콘/검색창-->
+<div th:fragment="beforeLoginUpm">
+    <ul class="container_member">
+      <li><a href="#" th:href="@{/login}"><span>로그인</span></a></li>
+      <li>|</li>
+      <li><a href="#" th:href="@{/member/add}"><span>회원가입</span></a></li>
+      <li>|</li>
+      <li><a href="#" th:href="@{/findEmailID}"><span>ID/비밀번호 찾기</span></a></li>
+    </ul>
+    <!-- 검색창 -->
+    <div class="container_search">
+          <div class="search">
+            <input class="search textbox" type="text" list="search-options" placeholder="검색어를 입력하세요.">
+            <datalist id="search-options">
+              <option value="딸기 생크림케이크"></option>
+              <option value="초코 생크림케이크"></option>
+              <option value="초코칩 쿠키"></option>
+              <option value="딸기 생크림케이크"></option>
+              <option value="사과 모양 케이크"></option>
+              <option value="파운드케이크"></option>
+          <option value="버터 쿠키"></option>
+        </datalist>
+        <button class="search button">검색</button>
+      </div>
+    </div>
+  </div>
+  <!-- 본문 -->
+<main th:data-cate-num="${cateNum}">
+        <!-- 왼쪽 카테고리 -->
+        <div id="leftCategory">
+            <div id="leftCategory_title">마이 페이지</div>
+            <ul class="leftCategory_ul">
+                <li class="leftCategory_li"><a href="" class="leftLi_a" id="cookie">관심리스트</a></li>
+                <li class="leftCategory_li"><a href="" class="leftLi_a" id="bread">나의 게시물 / 댓글</a></li>
+                <!-- <li class="leftCategory_li"><a href="" class="leftLi_a" id="drink"></a></li>
+                <li class="leftCategory_li"><a href="" class="leftLi_a" id="noOven">노오븐 베이킹</a></li> -->
+            </ul>
+        </div>
+  <!-- 게시물 -->
+  <div class="liLiWrap">
+    <div class="poLiMenu">
+      <ul>
+          <li class="poPoList"><a href="#" role="tab">게시물</a></li>
+          <li class="poCoList"><a href="#" role="tab">댓글</a></li>
+      </ul>
+    </div>
+    <div class="rpLiMain_top">
+        <div class="rpNum"><input type="checkbox"></div>
+        <span>|</span>
+        <div class="rpDate">등록일</div>
+        <span>|</span>
+        <div class="rpTitle">댓글 내용</div>
+        <span>|</span>
+        <div class="rpResult">게시물 제목</div>
+    </div>
+    <div class="rpLiMain_med">
+        <div class="item item1">
+            <div class="rpNum"><input type="checkbox"></div>
+            <div class="rpDate">2022-04-03</div>
+            <div class="rpTitle">여자친구한테 만들어줘야겠어요!</div>
+            <div class="rpResult">크림 디저트 딸기 푸드</div>
+        </div>
+        <div class="item item3">
+          <div class="rpNum"><input type="checkbox"></div>
+            <div class="rpDate">2021-12-24</div>
+            <div class="rpTitle">크리스마스랑 잘 어울리네요</div>
+            <div class="rpResult">머핀 케이크 만들기</div>
+        </div>
+        <div class="item item4">
+          <div class="rpNum"><input type="checkbox"></div>
+            <div class="rpDate">2022-01-20</div>
+            <div class="rpTitle">치즈케이크를 이렇게 쉽게 만들다니!</div>
+            <div class="rpResult">치즈케이크 만들기</div>
+        </div>
+        <div class="delBtn"><button id="delBtn">삭제</button></div>
+  </div>
+</main>
+<!-- 최하단 -->
+<footer th:fragment="fragment-footer">
+    <ul class="footer">
+      <li>HOME CA:BE 운영팀 : a@kh.com </li>
+      <li>|</li>
+      <li>이용약관</li>
+      <li>|</li>
+      <li>개인정보취급방침</li>
+      <li>|</li>
+      <li>000-111-2222</li>
+    </ul>
+  </footer>
+</body>
+</html>
