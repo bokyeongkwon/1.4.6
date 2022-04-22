@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="fragment/head">
+
+<head th:replace="fragment/head.html::fragment-head"></head>
+<th:block layout:fragment="page_css">
+  <link rel="stylesheet" href="내가 쓴 글.css" th:href="@{/css/board/boardDetail.css}">
+</th:block><th:block layout:fragment="page_js">
+    <script src="https://kit.fontawesome.com/d4b88f7572.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <script defer src="댓글_수정,삭제.js" th:src="@{/js/board/boardDetail.js}"></script>
+  <script defer th:src="@{/js/board/category.js}"></script>
+</th:block>
+<body>
+
+    <header th:fragment="fragment-global">
+        <div class="inner">
+          <!-- 로고 -->
+          <a href="" th:href="@{/}" class="logo"><img src="/logo.jpg" th:src="@{/img/logo.jpg}" alt="" width="150px" height="100px"></a>
+          <!-- 상단 메뉴 -->
+          <nav class="category" >
+            <ul class="menu">
+              <li>
+                <a href="#"><span>분야별 레시피</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=11}"><span>제과</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=12}"><span>제빵</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=13}"><span>음료</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=14}"><span>노오븐 베이킹</span></a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>테마별 레시피</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=21}"><span>발렌타인 데이</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=22}"><span>할로윈</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=23}"><span>빼빼로 데이</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=24}"><span>크리스마스</span></a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>사진 팁</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=31}">구도/각도</a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=32}">보정</a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>베이킹 클래스 찾기</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=41}">베이킹 클래스 찾기</a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>커뮤니티</span></a>
+                <ul>
+                  <li><a href="#"  th:href="@{/board/1?cateNum=51}">Q&A</a></li>
+                  <li><a href="#"  th:href="@{/board/1?cateNum=52}">자유 게시판</a></li>
+                </ul>
+              </li>
+            </ul>
+      
+          </nav>
+          <!-- 우측상단 아이콘 -->
+          <div class="icon">
+            <ul class="icon_ul">
+              <li><a href="#" class="searchBtn"><i class="fas fa-search"></i></a></li>
+              <li><a href="#" class="memberBtn"><i class="far fa-user"></i></a></li>
+              <li><a href="#" class="alarmBtn"><i class="fa fa-bell"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+<!--아이콘/검색창-->
+<div th:fragment="beforeLoginUpm">
+    <ul class="container_member">
+      <li><a href="#" th:href="@{/login}"><span>로그인</span></a></li>
+      <li>|</li>
+      <li><a href="#" th:href="@{/member/add}"><span>회원가입</span></a></li>
+      <li>|</li>
+      <li><a href="#" th:href="@{/findEmailID}"><span>ID/비밀번호 찾기</span></a></li>
+    </ul>
+    <!-- 검색창 -->
+    <div class="container_search">
+          <div class="search">
+            <input class="search textbox" type="text" list="search-options" placeholder="검색어를 입력하세요.">
+            <datalist id="search-options">
+              <option value="딸기 생크림케이크"></option>
+              <option value="초코 생크림케이크"></option>
+              <option value="초코칩 쿠키"></option>
+              <option value="딸기 생크림케이크"></option>
+              <option value="사과 모양 케이크"></option>
+              <option value="파운드케이크"></option>
+          <option value="버터 쿠키"></option>
+        </datalist>
+        <button class="search button">검색</button>
+      </div>
+    </div>
+  </div>
+  <!-- 본문 -->
+<main th:data-cate-num="${cateNum}">
+        <!-- 왼쪽 카테고리 -->
+        <div id="leftCategory">
+          <div id="leftCategory_title">마이 페이지</div>
+          <ul class="leftCategory_ul">
+              <li class="leftCategory_li"><a href="" class="leftLi_a" id="cookie">관심리스트</a></li>
+              <li class="leftCategory_li"><a href="" class="leftLi_a" id="bread">나의 게시물 / 댓글</a></li>
+              <!-- <li class="leftCategory_li"><a href="" class="leftLi_a" id="drink"></a></li>
+              <li class="leftCategory_li"><a href="" class="leftLi_a" id="noOven">노오븐 베이킹</a></li> -->
+          </ul>
+      </div>
+  <!-- 게시물 -->
+  <div class="liLiWrap">
+    <div class="poLiMenu">
+      <ul>
+          <li class="poPoList"><a href="#" role="tab">게시물</a></li>
+          <li class="poCoList"><a href="#" role="tab">댓글</a></li>
+      </ul>
+    </div>
+    <div class="liLiItems">
+        <div class="item">
+            <div class="post">
+                <div class="img"><img class="snowman" src="https://cdn.pixabay.com/photo/2015/03/17/18/34/baguette-678113_960_720.jpg" alt=""></div>
+                <div class="caption">
+                    <div class="postTitle">단단한 바게트빵 만들기</div>
+                    <div class="bookmark"><i class="fas fa-heart"></i></div>
+                </div>
+                    <div class="info">
+                        <span class="memId">하태우</span>
+                        <span class="uploadTime">2022.04.11</span>
+                    </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="post">
+                <div class="img"><img class="snowman" src="https://cdn.pixabay.com/photo/2019/12/25/17/55/cinnamon-roll-4719023_960_720.jpg" alt=""></div>
+                <div class="caption">
+                    <div class="postTitle">시나몬 롤 시나몬 빵 만들기</div>
+                    <div class="bookmark"><i class="fas fa-heart"></i></div>
+                </div>
+                    <div class="info">
+                        <span class="memId">하태우</span>
+                        <span class="uploadTime">2022.02.11</span>
+                    </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="post">
+                <div class="img"><img class="snowman" src="https://cdn.pixabay.com/photo/2022/02/15/00/40/lemonade-7014122_640.jpg" alt=""></div>
+                <div class="caption">
+                    <div class="postTitle">새콤달콤 레몬에이드 만들기</div>
+                    <div class="bookmark"><i class="fas fa-heart"></i></div>
+                </div>
+                    <div class="info">
+                        <span class="memId">하태우</span>
+                        <span class="uploadTime">2022.02.21</span>
+                    </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="post">
+                <div class="img"><img class="snowman" src="https://cdn.pixabay.com/photo/2013/09/05/19/31/donuts-179248_960_720.jpg" alt=""></div>
+                <div class="caption">
+                    <div class="postTitle">알록달록 도넛 오븐없이 간단하게 만들기</div>
+                    <div class="bookmark"><i class="fas fa-heart"></i></div>
+                </div>
+                    <div class="info">
+                        <span class="memId">하태우</span>
+                        <span class="uploadTime">2022.03.15</span>
+                    </div>
+            </div>
+        </div>
+        <div class="item">
+          <div class="post">
+              <div class="img"><img class="snowman" src="https://cdn.pixabay.com/photo/2013/09/18/18/24/chocolate-183543_960_720.jpg" alt=""></div>
+              <div class="caption">
+                  <div class="postTitle">스스로에게 선물하는 다크 초콜릿</div>
+                  <div class="bookmark"><i class="fas fa-heart"></i></div>
+              </div>
+                  <div class="info">
+                      <span class="memId">하태우</span>
+                      <span class="uploadTime">2022.03.15</span>
+                  </div>
+          </div>
+      </div>
+      <div class="item">
+        <div class="post">
+            <div class="img"><img class="snowman" src="https://cdn.pixabay.com/photo/2016/12/14/14/22/santa-claus-1906513_960_720.jpg" alt=""></div>
+            <div class="caption">
+                <div class="postTitle">산타할아버지 드릴 쿠키와 우유 준비하기</div>
+                <div class="bookmark"><i class="fas fa-heart"></i></div>
+            </div>
+                <div class="info">
+                    <span class="memId">하태우</span>
+                    <span class="uploadTime">2022.03.15</span>
+                </div>
+        </div>
+    </div>
+
+</main>
+<!-- 최하단 -->
+<footer th:fragment="fragment-footer">
+    <ul class="footer">
+      <li>HOME CA:BE 운영팀 : a@kh.com </li>
+      <li>|</li>
+      <li>이용약관</li>
+      <li>|</li>
+      <li>개인정보취급방침</li>
+      <li>|</li>
+      <li>000-111-2222</li>
+    </ul>
+  </footer>
+</body>
+</html>

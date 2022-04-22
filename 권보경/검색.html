@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorator="fragment/head">
+
+<head th:replace="fragment/head.html::fragment-head"></head>
+<th:block layout:fragment="page_css">
+  <link rel="stylesheet" href="검색.css" th:href="@{/css/board/boardDetail.css}">
+</th:block><th:block layout:fragment="page_js">
+    <script src="https://kit.fontawesome.com/d4b88f7572.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <script defer src="댓글_수정,삭제.js" th:src="@{/js/board/boardDetail.js}"></script>
+  <script defer th:src="@{/js/board/category.js}"></script>
+</th:block>
+<body>
+
+    <header th:fragment="fragment-global">
+        <div class="inner">
+          <!-- 로고 -->
+          <a href="" th:href="@{/}" class="logo"><img src="/logo.jpg" th:src="@{/img/logo.jpg}" alt="" width="150px" height="100px"></a>
+          <!-- 상단 메뉴 -->
+          <nav class="category" >
+            <ul class="menu">
+              <li>
+                <a href="#"><span>분야별 레시피</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=11}"><span>제과</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=12}"><span>제빵</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=13}"><span>음료</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=14}"><span>노오븐 베이킹</span></a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>테마별 레시피</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=21}"><span>발렌타인 데이</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=22}"><span>할로윈</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=23}"><span>빼빼로 데이</span></a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=24}"><span>크리스마스</span></a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>사진 팁</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=31}">구도/각도</a></li>
+                  <li><a href="#" th:href="@{/board/1?cateNum=32}">보정</a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>베이킹 클래스 찾기</span></a>
+                <ul>
+                  <li><a href="#" th:href="@{/board/1?cateNum=41}">베이킹 클래스 찾기</a></li>
+                </ul>
+              </li>
+              <li>|</li>
+              <li>
+                <a href="#"><span>커뮤니티</span></a>
+                <ul>
+                  <li><a href="#"  th:href="@{/board/1?cateNum=51}">Q&A</a></li>
+                  <li><a href="#"  th:href="@{/board/1?cateNum=52}">자유 게시판</a></li>
+                </ul>
+              </li>
+            </ul>
+      
+          </nav>
+          <!-- 우측상단 아이콘 -->
+          <div class="icon">
+            <ul class="icon_ul">
+              <li><a href="#" class="searchBtn"><i class="fas fa-search"></i></a></li>
+              <li><a href="#" class="memberBtn"><i class="far fa-user"></i></a></li>
+              <li><a href="#" class="alarmBtn"><i class="fa fa-bell"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+<!--아이콘/검색창-->
+<div th:fragment="beforeLoginUpm">
+    <ul class="container_member">
+      <li><a href="#" th:href="@{/login}"><span>로그인</span></a></li>
+      <li>|</li>
+      <li><a href="#" th:href="@{/member/add}"><span>회원가입</span></a></li>
+      <li>|</li>
+      <li><a href="#" th:href="@{/findEmailID}"><span>ID/비밀번호 찾기</span></a></li>
+    </ul>
+    <!-- 검색창 -->
+    <div class="container_search">
+          <div class="search">
+            <input class="search textbox" type="text" list="search-options" placeholder="쿠키">
+            <datalist id="search-options">
+              <option value="딸기 생크림케이크"></option>
+              <option value="초코 생크림케이크"></option>
+              <option value="초코칩 쿠키"></option>
+              <option value="딸기 생크림케이크"></option>
+              <option value="사과 모양 케이크"></option>
+              <option value="파운드케이크"></option>
+          <option value="버터 쿠키"></option>
+        </datalist>
+        <button class="search button">검색</button>
+      </div>
+    </div>
+  </div>
+  <!-- 본문 -->
+<main th:data-cate-num="${cateNum}">
+  <!-- 게시물 -->
+    <div class="upperBox">
+      <th:block th:each=" items :${subTitle}" th:if="${items.cateNum}==${cateNum}">
+        <!-- <div class="liLiMenu" th:text="${items.cateName}">[sub]</div> -->
+      </th:block>
+      <!-- <button type="button" id="writeBtn">글쓰기</button> -->
+    </div>
+
+      <!-- start -->
+      <div class="mapBoard">
+        <div class="mapBoard_container">
+          <div class="col uppermost"></div>
+          <div class="col uppermost title">제목</div>
+          <div class="col uppermost">작성자</div>
+          <div class="col uppermost">작성일</div>
+          <div class="col uppermost">조회수</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">1</div>
+          <div class="col title">촉촉한 초코칩쿠키 만들기</div>
+          <div class="col">소라</div>
+          <div class="col">2021-04-15</div>
+          <div class="col">25</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">2</div>
+          <div class="col title">당이 필요할때 당 폭발 흰가루 마약쿠키 만들기</div>
+          <div class="col">Jaeyeop</div>
+          <div class="col">2021-12-30</div>
+          <div class="col">230</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">3</div>
+          <div class="col title">노오븐 쿠키 만들기</div>
+          <div class="col">Jaeyeop</div>
+          <div class="col">2022-01-01</div>
+          <div class="col">130</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">4</div>
+          <div class="col title">할로윈엔 호박이지 호박쿠키 만들기</div>
+          <div class="col">소라</div>
+          <div class="col">2021-10-26</div>
+          <div class="col">300</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">5</div>
+          <div class="col title">박쥐쿠키 만들기</div>
+          <div class="col">봄</div>
+          <div class="col">2022-03-21</div>
+          <div class="col">10</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">6</div>
+          <div class="col title">너도 쿠키? 나도 쿠키 할로윈 쿠키 만들기</div>
+          <div class="col">Jaeyeop</div>
+          <div class="col">2021-10-28</div>
+          <div class="col">267</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">7</div>
+          <div class="col title">화이트쿠키 빼빼로 만들기</div>
+          <div class="col">SSoooda</div>
+          <div class="col">2021-11-09</div>
+          <div class="col">162</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">8</div>
+          <div class="col title">크리스마스 쿠키 만들기</div>
+          <div class="col">소라</div>
+          <div class="col">2021-12-23</div>
+          <div class="col">394</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">9</div>
+          <div class="col title">산타할아버지 드릴 쿠키와 우유 준비하기</div>
+          <div class="col">하태우</div>
+          <div class="col">2021-12-20</div>
+          <div class="col">451</div>
+
+          <div class="col" style="font-size: 0.8em; color: darkgrey;">10</div>
+          <div class="col title">크리스마스 쿠키런 쿠키 만들기</div>
+          <div class="col">bokyeong</div>
+          <div class="col">2021-12-22</div>
+          <div class="col">68</div>
+
+          <!-- db내용을 ListForm 형식에 맞게 표시하는 데 타임리프 반복문 필요 -->
+          <!-- <th:block th:each=" item : ${list}">
+          <div class="boardList2222">
+            <div class="col" th:text="${item.boardNum}">게시물 번호</div>
+            <div class="col" th:text="${item.boardNum}">제목</div>
+            <a href="" class="col" id="boardTitle" th:text="${item.boardTitle}" th:href="@{/board/{boardNum}/detail(boardNum=${item.boardNum},cateNum=${param.cateNum})}">제목</a>
+            <div class="col" th:text="${item.nickname}">작성자ID or Nickname</div>
+            <div class="col" th:text="${#temporals.format(item.boardDate,'yy/MM/dd HH:dd')}">작성일</div>
+            <div class="col" th:text="${item.boardHit}">조회수</div>
+          </div>
+          </th:block> -->
+        </div>
+      </div>
+      <!-- end -->
+
+    </div>
+
+  </div>
+</main>
+<!-- 최하단 -->
+<footer th:fragment="fragment-footer">
+    <ul class="footer">
+      <li>HOME CA:BE 운영팀 : a@kh.com </li>
+      <li>|</li>
+      <li>이용약관</li>
+      <li>|</li>
+      <li>개인정보취급방침</li>
+      <li>|</li>
+      <li>000-111-2222</li>
+    </ul>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,345 @@
+@charset "utf-8";
+@charset "utf-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Jua', sans-serif;
+}
+body{
+ background-color: #fcf8f4;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+header{
+    position:absolute;
+    left: 0;right: 0;top: 0;
+    min-width: 1300px;
+    height: 100px;
+    overflow: hidden;
+    background:linear-gradient(#fcf8f4 100px, rgba(255,255,255,0.7) 100px, rgba(255,255,255,0.7));
+    justify-content: space-between;
+    background: linear-gradient( to top, #fcf8f4, #FFE5CF );
+    text-align : center;
+}
+
+header:after{content: "";
+                position: absolute; top: 0; left: 0;
+                background:#666;
+                width: 100%;
+                height: 2px;}
+
+.inner{
+    height: 100px;
+    line-height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category > .menu > li , .icon > ul > li{
+    line-height: 100px;
+}
+
+.category > .menu > li > ul > li:hover a{
+    background-color: black;
+    color: blanchedalmond;
+}
+
+.menu > li, .icon  li{
+    float: left;
+    line-height: 50px;
+}
+.icon  li{
+    padding: 0 10px;
+}
+.menu > li a, .icon > li a{padding: 0 20px; color: black;}
+.menu > li a span {position: relative;}
+.menu > li > a span:after{
+    content:"";
+    position: absolute; left:50%;bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #f00;
+    transition:all .5s;
+}
+
+.category li:hover span:after{width:100%; left: 0;}
+nav > ul > li ul{width: 100%;}
+
+.menu > li :hover > ul:after{display: block;}
+
+/* 상단 메뉴 */
+.menu li{
+    /* margin:8px 12px; */
+    font-size: 25px;
+}
+
+/* 우측 상단 아이콘  */
+.icon li{
+    font-size: 30px;
+}
+
+.container_member{
+    display: flex;
+    justify-content: flex-end;
+    /* border:1px solid red; */
+    position: relative;
+    top: 80px;
+    display: none;
+}
+
+.container_member > li {
+    margin: 0 5px;
+}
+
+/* 검색창 */
+.container_search{
+    position: relative;
+    top: 100px;
+    width: 80%;
+    margin: 0 auto;
+    display: none;
+}
+.search{
+    height: 40px;
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.search.textbox{
+    height: 30px;
+    width: 80%;
+    text-align:start;
+    font-size: 25px;
+    border: 1px solid black;
+}
+
+.search.button{
+    height: 35px;
+    width: 50px;
+    padding-left: 10px;
+    line-height: 35px;
+    font-size: 16px;
+    background-color: #e5d0b5;
+}
+
+/* main */
+main {
+    height: 1400px;
+    width: 80%;
+    margin: 250px auto;
+    display: flex;
+}
+/* 왼쪽 카테고리 */
+#leftCategory {
+    height: 400px;
+    width: 13%;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+  }
+  
+  #leftCategory_title {
+    height: 10%;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-size: 18pt;
+    font-weight: bold;
+    line-height: 40px;
+    background-color: #FBD786;
+  }
+  
+  .leftCategory_ul {
+    height: 90%;
+    width: 100%;
+    list-style: none;
+  }
+  
+  .leftCategory_li {
+    height: 55px;
+    margin: 30px 0;
+    border-bottom: solid 1px black;
+    font-size: 18pt;
+    line-height: 20px;
+  }
+
+/* 본문 전체 */
+.liLiWrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* poLiMenu 부분 */
+.liLiWrap .poLiMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid red;
+}
+
+.liLiWrap .poLiMenu ul {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 1px solid #ddd;
+    font-size: 0;
+}
+
+.liLiWrap .poLiMenu li{
+    width: 25%;
+    display: inline-block;
+    border: 1px solid #ddd;
+    /* border-bottom: 1px solid #ef3e42; */
+    border-left: none;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+}
+
+.liLiWrap .poLiMenu li a {
+    display: block;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #707070;
+}
+
+.liLiWrap .poLiMenu li.poPoList{
+    border: 1px solid #ef3e42;
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+    color: #ef3e42;
+}
+
+/* 관심리스트 글씨 */
+.liLiWrap .liLiMenu{
+    margin: 10px 10px;
+    padding-left: 20px;
+    border-left: 4px solid #F37335;
+    font-size: 35px;
+}
+
+/* 게시물 부문 */
+.liLiWrap .liLiItems{
+    margin-top: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item {
+    height: 370px;
+    width: 300px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.post {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.img {
+    height: 65%;
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    text-align: center;
+}
+
+.snowman{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.caption {
+    height: 10%;
+    margin-top: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 17px
+}
+
+.postTitle {
+    font-weight: bold;
+}
+
+.bookmark {
+    margin-right: 10px;
+    text-align: center;
+    color: red;
+}
+
+.info {
+    display: flex;
+    justify-content: space-evenly;
+    color: gray;
+    font-size: 8pt;
+}
+
+.memId {
+    width: 200px;
+}
+
+.uploadTime {
+    width: 70px;
+  
+    text-align: center;
+}
+
+/* pageNav 부분 */
+.liLiWrap .pageNav{
+    height: 50px;
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.liLiWrap .pageNav .pageNum{
+    margin: 30px;
+    padding: 0 15px;
+    list-style: none;
+    border: 1px solid black;
+}
+
+/* 하단 */
+footer{
+    border-top: 1px solid black;
+}
+
+footer>ul{
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between
+}
